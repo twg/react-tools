@@ -9,6 +9,10 @@
   margin-bottom: 24px;
 }
 
+.button:hover {
+  cursor: pointer;
+}
+
 /* Button.props.size */
 .hero {
   font-size: 18px;
@@ -25,7 +29,6 @@
   width: 100px;
   height: 32px;
   font-size: 13px;
-  // Override to ensure text rendering vertically aligned... 🔍
   line-height: 29px;
 }
 
