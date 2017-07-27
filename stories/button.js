@@ -13,7 +13,9 @@ import {
 import { Button } from "../src/Button";
 
 export default function() {
-  storiesOf("Button", module)
+  const stories = storiesOf("Button", module);
+  stories.addDecorator(withKnobs);
+  stories
     .addWithInfo(
       "General Overview",
       `This is a basic button with various sizes.`,
@@ -40,24 +42,17 @@ export default function() {
         </Button>,
       { inline: true, source: true, header: false }
     )
-    .add("with some emoji", () =>
-      <Button onClick={action("clicked")}>😀 😎 👍 💯</Button>
+    .addWithInfo(
+      "Sandbox",
+      "Play around",
+      () =>
+        <Button
+          color={select("Color", ["grey", "green", "orange"], "grey")}
+          size={select("Size", ["hero", "primary", "secondary"], "hero")}
+          noMargin={boolean("noMargin", true)}
+        >
+          {text("Label", "Hello Button")}
+        </Button>,
+      { inline: true, source: true, header: false }
     );
-
-  const stories = storiesOf("Button", module);
-  stories.addDecorator(withKnobs);
-
-  stories.addWithInfo(
-    "Sandbox",
-    "Play around",
-    () =>
-      <Button
-        color={select("Color", ["grey", "green", "orange"], "grey")}
-        size={select("Size", ["hero", "primary", "secondary"], "hero")}
-        noMargin={boolean("noMargin", true)}
-      >
-        {text("Label", "Hello Button")}
-      </Button>,
-    { inline: true, source: true, header: false }
-  );
 }
