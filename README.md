@@ -31,3 +31,11 @@ Then visit [http://localhost:6006](http://localhost:6006) in your browser.
 ```bash
 $ yarn build-storybook
 ```
+
+## Contributing
+If you have a component and some stories that you think should be included, there are a couple of ways to get it into TWG's storybook.
+
+* Just let any of the contributors know, we'll help out.
+* 
+  * (For now) add the component's source into a new folder in src
+  * Add a file to the stories folder that exports a function that pop u

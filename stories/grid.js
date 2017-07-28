@@ -16,28 +16,60 @@ const gridItemStyle = {
   border: "1px solid black"
 };
 
+function getSettings(index) {
+  const phabletOptions = select(
+    `Column ${index + 1} phablet`,
+    ["phablet1of2", "phablet2of2"],
+    "phablet1of2"
+  );
+  const tabletOptions = select(
+    `Column ${index + 1} tablet`,
+    ["tablet1of2", "tablet2of2", "tablet1of3", "tablet2of3", "tablet3of3"],
+    "tablet1of2"
+  );
+
+  const mobileOptions = select(
+    `Column ${index + 1} mobile`,
+    ["mobile1of2", "mobile2of2"],
+    "mobile1of2"
+  );
+
+  return {
+    col: text(`Column ${index + 1} col`, "1/4"),
+    style: gridItemStyle,
+    [tabletOptions]: true,
+    [phabletOptions]: true,
+    [mobileOptions]: true
+  };
+}
+
 export default function() {
-  storiesOf(
-    "Grid",
-    module
-  ).addWithInfo(
+  const stories = storiesOf("Grid", module);
+  stories.addDecorator(withKnobs);
+  stories.addWithInfo(
     "General Overview",
     `This is a grid component to allow for grid style layouts in react`,
-    () =>
-      <Grid>
-        <GridItem col="1/4" phablet1of2 mobile1of2 style={gridItemStyle}>
-          Column 1
-        </GridItem>
-        <GridItem col="1/4" phablet2of2 mobile1of2 style={gridItemStyle}>
-          Column 2
-        </GridItem>
-        <GridItem col="1/4" phablet1of2 mobile1of1 style={gridItemStyle}>
-          Column 3
-        </GridItem>
-        <GridItem col="1/4" phablet2of2 mobile1of1 style={gridItemStyle}>
-          Column 4
-        </GridItem>
-      </Grid>,
+    () => {
+      const totalCols = number("Column amount", 4);
+
+      let settings = [];
+
+      for (var index = 0; index < totalCols; index++) {
+        settings.push(getSettings(index));
+      }
+
+      return (
+        <Grid>
+          {settings.map((setting, index) => {
+            return (
+              <GridItem {...setting}>
+                Column {index + 1}
+              </GridItem>
+            );
+          })}
+        </Grid>
+      );
+    },
     { inline: true }
   );
 }
