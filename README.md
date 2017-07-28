@@ -19,15 +19,15 @@ $ yarn
 ## Run the styleguide server for development
 
 ```bash
-$ yarn styleguide-server
+$ yarn run storybook
 ```
 
-Then visit [http://localhost:8082](http://localhost:8082) in your browser.
+Then visit [http://localhost:6006](http://localhost:6006) in your browser.
 
-## Building static styleguide
+## Exporting static storybook
 
 (this can take a minute...)
 
 ```bash
-$ yarn styleguide-build
+$ yarn build-storybook
 ```
