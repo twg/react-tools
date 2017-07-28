@@ -6,6 +6,7 @@
   font-size: 14px;
   vertical-align: top;
   text-align: left;
+  box-sizing: border-box;
 }
 
 .noGutter {

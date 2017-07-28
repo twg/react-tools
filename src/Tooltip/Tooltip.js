@@ -34,7 +34,6 @@ Tooltip.propTypes = {
   /**
    * Sets the tooltip to open to the left instead of above
    */
-
   openLeft: PropTypes.bool
 };
 
