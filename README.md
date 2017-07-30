@@ -1,6 +1,9 @@
 # React Component Library/Tools
 
 This is a set of tools to help TWGers work more quickly by giving them access to TRT (TWG-React-Tools).
+
+TRT helps you perform better, faster - by allowing you to quickly perform tasks that are common to most TWG reacters
+
 The tools in this set adhere to [TWG's react guidelines](https://github.com/twg/react-guidelines)
 
 This suite of tools is comprised of a library of components and commands - including, but not limited to:
