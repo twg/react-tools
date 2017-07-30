@@ -31,6 +31,10 @@ const include = (modifier, target) => {
   );
 };
 
+const storybook = () => {
+  shell.exec(`npm run --prefix ${__dirname}/../ storybook`);
+};
+
 (function main() {
   switch (mainCommand) {
     case "generate":
@@ -40,6 +44,10 @@ const include = (modifier, target) => {
     case "include":
     case "-i":
       include(modifier, target);
+      break;
+    case "storybook":
+    case "sb":
+      storybook();
       break;
     default:
       console.log("Unrecognized command: no action");
