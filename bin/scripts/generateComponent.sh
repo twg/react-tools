@@ -1,24 +1,33 @@
 #!/bin/bash
 
-USAGE="Usage: regen type name"
+USAGE="Usage: trt generate component ComponentName"
 
-if [ $# == 0 ] || [ $# == 1 ]; then
-    echo $USAGE
-    exit 1;
+if [ $# -lt 2 ]; then
+  echo $USAGE
+  exit 1;
 fi
 
 if [ "$1" == "component" ]; then
-name=$2
-Name="$(tr '[:lower:]' '[:upper:]' <<< ${name:0:1})${name:1}"
+supplied_name=$2
 
-mkdir "./$name"
+# Capitalized version of the Component name
+Name="$(tr '[:lower:]' '[:upper:]' <<< ${supplied_name:0:1})${supplied_name:1}"
 
-cat > "./$name/index.js" <<EOF
+# Lowercased version of the Component name
+name="$(tr '[:upper:]' '[:lower:]' <<< ${supplied_name:0:1})${supplied_name:1}"
+
+mkdir "./$Name"
+
+if [ "$?" -ne "0" ]; then
+  exit 1
+fi
+
+cat > "./$Name/$Name.js" <<EOF
 import React from 'react'
 import css from './style.css'
 
 const $Name = () => (
-  <div className={css.container} />
+  <div className={css.$name} />
 )
 
 $Name.propTypes = {
@@ -27,21 +36,27 @@ $Name.propTypes = {
 export default $Name
 EOF
 
-cat > "./$name/style.css" <<EOF
-.container {
+cat > "./$Name/style.css" <<EOF
+.$name {
 
 }
 EOF
 
-cat > "./$name/index.test.js"<<EOF
+cat > "./$Name/$Name.test.js"<<EOF
 /* eslint-env jest */
 
 import React from 'react'
-import $Name from './'
+import $Name from './$Name'
 
-describe('$name', () => {
+describe('$Name', () => {
   <$Name />
 })
 EOF
+
+cat > "./$Name/index.js"<<EOF
+export { default as $Name } from './$Name.js'
+EOF
+
+echo $Name created ✨
 
 fi
