@@ -13,13 +13,14 @@ This suite of tools is comprised of a library of components and commands - inclu
 * A command to generate all files associated with a new component in the style that TWG prefers
 
 # Installing
-Since this is a private repository, we install via npm + git
+Since this is a private repository, we install via yarn + git
+
+`yarn global add git+ssh://git@github.com:twg/react-component-library.git`
+
+or
 
 `npm install -g git+ssh://git@github.com:twg/react-component-library.git`
 
-(Note, that if you're trying this command before the storybook branch has been merged into master - you'll have to specify the branch)
-
-`npm install -g git+ssh://git@github.com:twg/react-component-library.git#storybook`
 
 This will take a couple moments while it installs the dependencies for storybook
 

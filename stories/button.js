@@ -1,6 +1,6 @@
-import React from "react";
-import { storiesOf } from "@storybook/react";
-import { action } from "@storybook/addon-actions";
+import React from 'react'
+import { storiesOf } from '@storybook/react'
+import { action } from '@storybook/addon-actions'
 import {
   withKnobs,
   text,
@@ -8,16 +8,16 @@ import {
   number,
   object,
   select
-} from "@storybook/addon-knobs";
+} from '@storybook/addon-knobs'
 
-import { Button } from "../src/Button";
+import { Button } from '../src/Button'
 
 export default function() {
-  const stories = storiesOf("Button", module);
-  stories.addDecorator(withKnobs);
+  const stories = storiesOf('Button', module)
+  stories.addDecorator(withKnobs)
   stories
     .addWithInfo(
-      "General Overview",
+      'General Overview',
       `This is a basic button with various sizes.`,
       () =>
         <div>
@@ -34,25 +34,25 @@ export default function() {
       { inline: true }
     )
     .addWithInfo(
-      "simple usage",
+      'simple usage',
       `This is the basic usage with the button with providing a label to show the text.`,
       () =>
-        <Button size="hero" onClick={action("clicked")}>
+        <Button size="hero" onClick={action('clicked')}>
           Become a member
         </Button>,
       { inline: true, source: true, header: false }
     )
     .addWithInfo(
-      "Sandbox",
-      "Play around",
+      'Sandbox',
+      'Play around',
       () =>
         <Button
-          color={select("Color", ["grey", "green", "orange"], "grey")}
-          size={select("Size", ["hero", "primary", "secondary"], "hero")}
-          noMargin={boolean("noMargin", true)}
+          color={select('Color', ['grey', 'green', 'orange'], 'grey')}
+          size={select('Size', ['hero', 'primary', 'secondary'], 'hero')}
+          noMargin={boolean('noMargin', true)}
         >
-          {text("Label", "Hello Button")}
+          {text('Label', 'Hello Button')}
         </Button>,
       { inline: true, source: true, header: false }
-    );
+    )
 }

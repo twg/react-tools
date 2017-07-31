@@ -1,4 +1,4 @@
-import Grid from "./Grid";
-import GridItem from "./GridItem";
+import Grid from './Grid'
+import GridItem from './GridItem'
 
-export { Grid, GridItem };
+export { Grid, GridItem }

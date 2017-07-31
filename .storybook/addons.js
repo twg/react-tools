@@ -1,1 +1,1 @@
-import knobs from "@storybook/addon-knobs/register";
+import knobs from '@storybook/addon-knobs/register'

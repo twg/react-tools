@@ -1,10 +1,10 @@
-import { configure, setAddon, addDecorator } from "@storybook/react";
-import infoAddon from "@storybook/addon-info";
+import { configure, setAddon, addDecorator } from '@storybook/react'
+import infoAddon from '@storybook/addon-info'
 
-setAddon(infoAddon);
+setAddon(infoAddon)
 
 function loadStories() {
-  require("../storybook");
+  require('../storybook')
 }
 
-configure(loadStories, module);
+configure(loadStories, module)

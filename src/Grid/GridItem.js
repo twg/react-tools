@@ -1,34 +1,34 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import Styles from "./style.css";
+import Styles from './style.css'
 
 const GridItem = props => {
-  const { col } = props;
-  const columns = col.split("/");
-  const percent = columns[0] / columns[1] * 100;
+  const { col } = props
+  const columns = col.split('/')
+  const percent = columns[0] / columns[1] * 100
 
   const classes = [
     Styles.gridItem,
-    props.className || "",
+    props.className || '',
     ...[
-      "tablet1of1",
-      "tablet1of2",
-      "tablet1of3",
-      "tablet2of3",
-      "phablet1of1",
-      "phablet1of2",
-      "mobile1of1",
-      "mobile1of2"
+      'tablet1of1',
+      'tablet1of2',
+      'tablet1of3',
+      'tablet2of3',
+      'phablet1of1',
+      'phablet1of2',
+      'mobile1of1',
+      'mobile1of2'
     ].map(property => (props[property] ? Styles[property] : null))
-  ].join(" ");
+  ].join(' ')
 
   return (
     <div className={classes} style={{ width: `${percent}%`, ...props.style }}>
       {props.children}
     </div>
-  );
-};
+  )
+}
 
 GridItem.propTypes = {
   /**
@@ -72,6 +72,6 @@ GridItem.propTypes = {
   * A style object that inlines the style to the containing element
   */
   style: PropTypes.object
-};
+}
 
-export default GridItem;
+export default GridItem

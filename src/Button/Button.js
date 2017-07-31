@@ -1,26 +1,26 @@
-import React from "react";
-import { compact } from "lodash";
+import React from 'react'
+import { compact } from 'lodash'
 
-import css from "./style.css";
+import css from './style.css'
 
 const Button = props => {
   const classes = [
     css.button,
-    props.size ? css[props.size] : "",
-    props.noMargin ? css.noMargin : ""
-  ];
+    props.size ? css[props.size] : '',
+    props.noMargin ? css.noMargin : ''
+  ]
 
   return (
     <button
-      className={compact(classes).join(" ")}
-      type={props.type || "button"}
+      className={compact(classes).join(' ')}
+      type={props.type || 'button'}
       onClick={props.onClick}
       style={{ background: props.color }}
     >
       {props.children}
     </button>
-  );
-};
+  )
+}
 
 Button.propTypes = {
   /**
@@ -43,6 +43,6 @@ Button.propTypes = {
    * If true, applies margin: 0px property
    */
   noMargin: React.PropTypes.bool
-};
+}
 
-export default Button;
+export default Button

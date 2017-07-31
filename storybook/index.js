@@ -1,15 +1,15 @@
-import React from "react";
+import React from 'react'
 
-import { storiesOf } from "@storybook/react";
-import { linkTo } from "@storybook/addon-links";
+import { storiesOf } from '@storybook/react'
+import { linkTo } from '@storybook/addon-links'
 
-import { Welcome } from "@storybook/react/demo";
-import * as stories from "../stories";
+import { Welcome } from '@storybook/react/demo'
+import * as stories from '../stories'
 
-storiesOf("Welcome", module).add("to Storybook", () =>
-  <Welcome showApp={linkTo("Button")} />
-);
+storiesOf('Welcome', module).add('to Storybook', () =>
+  <Welcome showApp={linkTo('Button')} />
+)
 
 for (let story in stories) {
-  stories[story]();
+  stories[story]()
 }

@@ -1,12 +1,12 @@
-import React, { PropTypes } from "react";
-import css from "./style.css";
+import React, { PropTypes } from 'react'
+import css from './style.css'
 
 const Tooltip = props => {
-  const tooltipClasses = [css.tooltip].join(" ");
+  const tooltipClasses = [css.tooltip].join(' ')
 
-  const popoverClasses = [css.popover, props.openLeft ? css.openLeft : ""].join(
-    " "
-  );
+  const popoverClasses = [css.popover, props.openLeft ? css.openLeft : ''].join(
+    ' '
+  )
 
   return (
     <div className={tooltipClasses}>
@@ -17,8 +17,8 @@ const Tooltip = props => {
         {props.content}
       </div>
     </div>
-  );
-};
+  )
+}
 
 Tooltip.propTypes = {
   /**
@@ -35,6 +35,6 @@ Tooltip.propTypes = {
    * Sets the tooltip to open to the left instead of above
    */
   openLeft: PropTypes.bool
-};
+}
 
-export default Tooltip;
+export default Tooltip

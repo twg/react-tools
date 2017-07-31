@@ -1,6 +1,6 @@
-import React from "react";
-import { storiesOf } from "@storybook/react";
-import { action } from "@storybook/addon-actions";
+import React from 'react'
+import { storiesOf } from '@storybook/react'
+import { action } from '@storybook/addon-actions'
 import {
   withKnobs,
   text,
@@ -8,54 +8,54 @@ import {
   number,
   object,
   select
-} from "@storybook/addon-knobs";
+} from '@storybook/addon-knobs'
 
-import { Grid, GridItem } from "../src/Grid";
+import { Grid, GridItem } from '../src/Grid'
 
 const gridItemStyle = {
-  border: "1px solid black"
-};
+  border: '1px solid black'
+}
 
 function getSettings(index) {
   const phabletOptions = select(
     `Column ${index + 1} phablet`,
-    ["phablet1of2", "phablet2of2"],
-    "phablet1of2"
-  );
+    ['phablet1of2', 'phablet2of2'],
+    'phablet1of2'
+  )
   const tabletOptions = select(
     `Column ${index + 1} tablet`,
-    ["tablet1of2", "tablet2of2", "tablet1of3", "tablet2of3", "tablet3of3"],
-    "tablet1of2"
-  );
+    ['tablet1of2', 'tablet2of2', 'tablet1of3', 'tablet2of3', 'tablet3of3'],
+    'tablet1of2'
+  )
 
   const mobileOptions = select(
     `Column ${index + 1} mobile`,
-    ["mobile1of2", "mobile2of2"],
-    "mobile1of2"
-  );
+    ['mobile1of2', 'mobile2of2'],
+    'mobile1of2'
+  )
 
   return {
-    col: text(`Column ${index + 1} col`, "1/4"),
+    col: text(`Column ${index + 1} col`, '1/4'),
     style: gridItemStyle,
     [tabletOptions]: true,
     [phabletOptions]: true,
     [mobileOptions]: true
-  };
+  }
 }
 
 export default function() {
-  const stories = storiesOf("Grid", module);
-  stories.addDecorator(withKnobs);
+  const stories = storiesOf('Grid', module)
+  stories.addDecorator(withKnobs)
   stories.addWithInfo(
-    "General Overview",
+    'General Overview',
     `This is a grid component to allow for grid style layouts in react`,
     () => {
-      const totalCols = number("Column amount", 4);
+      const totalCols = number('Column amount', 4)
 
-      let settings = [];
+      let settings = []
 
       for (var index = 0; index < totalCols; index++) {
-        settings.push(getSettings(index));
+        settings.push(getSettings(index))
       }
 
       return (
@@ -65,11 +65,11 @@ export default function() {
               <GridItem {...setting}>
                 Column {index + 1}
               </GridItem>
-            );
+            )
           })}
         </Grid>
-      );
+      )
     },
     { inline: true }
-  );
+  )
 }
