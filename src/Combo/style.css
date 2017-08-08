@@ -1,0 +1,39 @@
+/* block */
+
+.combo {
+  display: table;
+  width: 100%;
+}
+
+/* elements */
+
+.first,
+.last {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.first {
+  width: 0;
+}
+.last {
+  width: 100%;
+}
+
+/* modifiers */
+
+.rev > .first {
+  width: 100%;
+}
+.rev > .last {
+  width: 0;
+  white-space: nowrap;
+}
+
+.middle > * {
+  vertical-align: middle;
+}
+
+.bottom > * {
+  vertical-align: bottom;
+}
