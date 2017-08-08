@@ -10,7 +10,7 @@ import {
   select
 } from '@storybook/addon-knobs'
 
-import { Tooltip } from '../src/Tooltip'
+import { Tooltip } from '../src'
 
 export default function() {
   const stories = storiesOf('Tooltip', module)
