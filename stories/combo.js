@@ -16,22 +16,21 @@ export default function() {
   const stories = storiesOf('Combo', module)
   stories.addDecorator(withKnobs)
   stories.addWithInfo(
-    'General Overview',
-    `A component to allow you to have contant of variable size and have the remainder be taken up by the remaining content`,
-    () => <Combo />,
+    'A component to allow you to have content of variable size and have the remainder be taken up by the remaining content',
+    () =>
+      <Combo>
+        <ComboFirst>
+          <img
+            src="https://twg.io/954c24bb4bbfe909730f85f6c55c8e9e.svg"
+            width="500px"
+          />
+        </ComboFirst>
+        <ComboLast>
+          Software is the most powerful tool to drive business value. We build
+          end-to-end web and mobile applications for willing innovators and
+          their customers.
+        </ComboLast>
+      </Combo>,
     { inline: true }
   )
-  // .addWithInfo(
-  //   'Sandbox',
-  //   'Play around',
-  //   () =>
-  //     <Button
-  //       color={select('Color', ['grey', 'green', 'orange'], 'grey')}
-  //       size={select('Size', ['hero', 'primary', 'secondary'], 'hero')}
-  //       noMargin={boolean('noMargin', true)}
-  //     >
-  //       {text('Label', 'Hello Button')}
-  //     </Button>,
-  //   { inline: true, source: true, header: false }
-  // )
 }
