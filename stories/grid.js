@@ -10,7 +10,7 @@ import {
   select
 } from '@storybook/addon-knobs'
 
-import { Grid, GridItem } from '../src/Grid'
+import { Grid, GridItem } from '../src'
 
 const gridItemStyle = {
   border: '1px solid black'

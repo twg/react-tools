@@ -10,7 +10,7 @@ import {
   select
 } from '@storybook/addon-knobs'
 
-import { Button } from '../src/Button'
+import { Button } from '../src'
 
 export default function() {
   const stories = storiesOf('Button', module)
