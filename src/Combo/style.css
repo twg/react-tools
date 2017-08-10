@@ -1,7 +1,7 @@
 /* block */
 
 .combo {
-  display: table;
+  display: flex;
   width: 100%;
 }
 
@@ -9,24 +9,19 @@
 
 .first,
 .last {
-  display: table-cell;
   vertical-align: top;
 }
 
-.first {
-  width: 0;
-}
 .last {
-  width: 100%;
+  flex-grow: 1;
 }
 
 /* modifiers */
 
 .rev > .first {
-  width: 100%;
+  flex-grow: 1;
 }
 .rev > .last {
-  width: 0;
   white-space: nowrap;
 }
 
