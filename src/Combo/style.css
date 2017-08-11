@@ -1,0 +1,34 @@
+/* block */
+
+.combo {
+  display: flex;
+  width: 100%;
+}
+
+/* elements */
+
+.first,
+.last {
+  vertical-align: top;
+}
+
+.last {
+  flex-grow: 1;
+}
+
+/* modifiers */
+
+.rev > .first {
+  flex-grow: 1;
+}
+.rev > .last {
+  white-space: nowrap;
+}
+
+.middle > * {
+  vertical-align: middle;
+}
+
+.bottom > * {
+  vertical-align: bottom;
+}
