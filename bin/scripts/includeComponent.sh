@@ -12,4 +12,4 @@ target=`dirname "$0"`
 target+="/../../src/$1"
 
 cp -r $target $location
-echo $1 copied to $location
+echo $1 copied to $location ✨

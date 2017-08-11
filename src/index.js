@@ -1,4 +1,5 @@
 export * from './Button/'
+export * from './Combo/'
 export * from './Grid/'
 export * from './Tooltip/'
 export * from './Welcome/'

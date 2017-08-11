@@ -22,7 +22,7 @@ if [ "$?" -ne "0" ]; then
   exit 1
 fi
 
-cat > "./$Name/$Name.js" <<EOF
+cat > "./$Name/index.js" <<EOF
 import React from 'react'
 import css from './style.css'
 
@@ -42,7 +42,7 @@ cat > "./$Name/style.css" <<EOF
 }
 EOF
 
-cat > "./$Name/$Name.test.js"<<EOF
+cat > "./$Name/index.test.js"<<EOF
 /* eslint-env jest */
 
 import React from 'react'
@@ -51,10 +51,6 @@ import $Name from './$Name'
 describe('$Name', () => {
   <$Name />
 })
-EOF
-
-cat > "./$Name/index.js"<<EOF
-export { default as $Name } from './$Name.js'
 EOF
 
 echo $Name created ✨
