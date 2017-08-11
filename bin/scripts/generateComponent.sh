@@ -53,10 +53,6 @@ describe('$Name', () => {
 })
 EOF
 
-cat > "./$Name/index.js"<<EOF
-export { default as $Name } from './$Name.js'
-EOF
-
 echo $Name created ✨
 
 fi
