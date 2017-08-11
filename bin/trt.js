@@ -5,8 +5,8 @@ const ARGS = process.argv.slice(2)
 
 const USAGE = `
   Usage:
-    trt generate sc ComponentName    # Scaffold a new, empty React stateless component
-    trt generate cc ComponentName    # Scaffold a new, empty React class component
+    trt generate sc ComponentName           # Scaffold a new, empty React stateless component
+    trt generate cc ComponentName           # Scaffold a new, empty React class component
     trt include ComponentName [path]        # Include a component from the Library at path
     trt storybook                           # Start Storybook on http://localhost:6006
     trt -h, --help                          # Print this message
@@ -35,6 +35,7 @@ const generate = (modifier, target) => {
       )
       break
     default:
+      help()
       break
   }
 }

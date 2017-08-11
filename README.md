@@ -46,12 +46,12 @@ There are currently two different options for generating:
   * Stateless component
   * Class component
 
-If you're unsure about the difference between the two, [here](https://jaketrent.com/post/smart-dumb-components-react/) is an excellent resource. 
+If you're unsure about the difference between the two, [here](https://jaketrent.com/post/smart-dumb-components-react/) is an excellent resource.
 
 There are 2 arguments for this command
 
 * Argument 1 is *required* and is the _type_ of component you want to create:
-  * `sc (stateless component)` or `cc (class component`
+  * `sc (stateless component)` or `cc (class component)`
 * Argument 2 is *required* and is the name of the component you want to create
 
 `trt generate sc MyComponent`
