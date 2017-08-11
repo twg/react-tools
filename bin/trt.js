@@ -22,15 +22,15 @@ const help = () => {
 
 const generate = (modifier, target) => {
   switch (modifier) {
-    case 'component':
+    case 'sc':
       shell.exec(
-        `bash ${__dirname}/scripts/generateComponent.sh component ${target ||
+        `bash ${__dirname}/scripts/generateStatelessComponent.sh statelessComponent ${target ||
           ''}`
       )
       break
-    case 'container':
+    case 'cc':
       shell.exec(
-        `bash ${__dirname}/scripts/generateContainer.sh container ${target ||
+        `bash ${__dirname}/scripts/generateClassComponent.sh classComponent ${target ||
           ''}`
       )
       break
