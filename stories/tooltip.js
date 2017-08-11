@@ -29,7 +29,7 @@ export default function() {
           <div>
             {`Value passed into tooltip's content: ${tooltipContent}`}
           </div>
-          <Tooltip content={renderedVal}>Hover me</Tooltip>
+          <Test />
         </div>
       )
     },
