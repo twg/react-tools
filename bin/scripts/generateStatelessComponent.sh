@@ -1,13 +1,13 @@
 #!/bin/bash
 
-USAGE="Usage: trt generate component ComponentName"
+USAGE="Usage: trt generate sc ComponentName"
 
 if [ $# -lt 2 ]; then
   echo $USAGE
   exit 1;
 fi
 
-if [ "$1" == "component" ]; then
+if [ "$1" == "statelessComponent" ]; then
 supplied_name=$2
 
 # Capitalized version of the Component name
