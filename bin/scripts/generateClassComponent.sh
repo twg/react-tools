@@ -1,6 +1,6 @@
 #!/bin/bash
 
-USAGE="Usage: trt generate cc ContainerName"
+USAGE="Usage: trt generate cc ComponentName"
 
 if [ $# -lt 2 ]; then
   echo $USAGE
@@ -10,10 +10,10 @@ fi
 if [ "$1" == "classComponent" ]; then
 supplied_name=$2
 
-# Capitalized version of the container name
+# Capitalized version of the component name
 Name="$(tr '[:lower:]' '[:upper:]' <<< ${supplied_name:0:1})${supplied_name:1}"
 
-# Lowercased version of the container name
+# Lowercased version of the component name
 name="$(tr '[:upper:]' '[:lower:]' <<< ${supplied_name:0:1})${supplied_name:1}"
 
 mkdir "./$Name"

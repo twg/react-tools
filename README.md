@@ -43,20 +43,20 @@ The root command for this is: `trt generate`
 ### Generate options
 
 There are currently two different options for generating:
-  * Container
-  * Component
+  * Stateless component
+  * Class component
 
 If you're unsure about the difference between the two, [here](https://jaketrent.com/post/smart-dumb-components-react/) is an excellent resource. 
 
 There are 2 arguments for this command
 
 * Argument 1 is *required* and is the _type_ of component you want to create:
-  * `container` or `component`
+  * `sc (stateless component)` or `cc (class component`
 * Argument 2 is *required* and is the name of the component you want to create
 
-`trt generate container MyComponent`
+`trt generate sc MyComponent`
 or
-`trt generate component MyComponent`
+`trt generate cc MyComponent`
 
 ## Include
 
