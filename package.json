@@ -1,7 +1,7 @@
 {
   "name": "react-component-library",
   "description": "Take a component, leave a component",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "twg",
   "private": true,
   "scripts": {
