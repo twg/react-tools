@@ -12,7 +12,7 @@ This suite of tools is comprised of a library of components and commands - inclu
 * A command line tool to copy these components into a project
 * A command to generate all files associated with a new component in the style that TWG prefers
 
-# Installing
+# Installing && Updating
 Since this is a private repository, we install via yarn + git
 
 `yarn global add git+ssh://git@github.com:twg/react-component-library.git`
@@ -38,12 +38,24 @@ This starts Storybook on http://localhost:6006
 
 This command will generate a new react component using TWG's style guide - complete with a .js, .css, and testing file inside of a folder in the location that you run this command.
 
-The root command for this is: `trt generate component`
+The root command for this is: `trt generate`
 
-There is only one argument for this command:
+### Generate options
 
-* Argument 1 is *required* and is the name of the component you want to create
+There are currently two different options for generating:
+  * Container
+  * Component
 
+If you're unsure about the difference between the two, [here](https://jaketrent.com/post/smart-dumb-components-react/) is an excellent resource. 
+
+There are 2 arguments for this command
+
+* Argument 1 is *required* and is the _type_ of component you want to create:
+  * `container` or `component`
+* Argument 2 is *required* and is the name of the component you want to create
+
+`trt generate container MyComponent`
+or
 `trt generate component MyComponent`
 
 ## Include
