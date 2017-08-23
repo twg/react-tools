@@ -15,11 +15,11 @@ This suite of tools is comprised of a library of components and commands - inclu
 # Installing && Updating
 Since this is a private repository, we install via yarn + git
 
-`yarn global add git+ssh://git@github.com:twg/react-component-library.git`
+`yarn global add twg-react-tools`
 
 or
 
-`npm install -g git+ssh://git@github.com:twg/react-component-library.git`
+`npm install -g twg-react-tools`
 
 
 This will take a couple moments while it installs the dependencies for storybook
