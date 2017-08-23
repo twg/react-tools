@@ -3,6 +3,7 @@
   "description": "Take a component, leave a component",
   "version": "0.0.4",
   "author": "twg",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "storybook": "start-storybook -p 6006",
