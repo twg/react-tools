@@ -13,7 +13,7 @@ This suite of tools is comprised of a library of components and commands - inclu
 * A command to generate all files associated with a new component in the style that TWG prefers
 
 # Installing && Updating
-Since this is a private repository, we install via yarn + git
+You can easily add TRT to your globals by adding 
 
 `yarn global add twg-react-tools`
 

@@ -4,7 +4,7 @@
   "version": "0.0.4",
   "author": "twg",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
