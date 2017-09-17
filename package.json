@@ -7,10 +7,14 @@
   "private": false,
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "precommit": "lint-staged"
   },
   "bin": {
     "trt": "bin/trt.js"
+  },
+  "lint-staged": {
+    "*.{js,json}": ["prettier --write", "git add"]
   },
   "dependencies": {
     "@storybook/addon-info": "^3.1.9",
@@ -28,5 +32,10 @@
     "style-loader": "^0.13.1",
     "webpack": "^2.2.1",
     "webpack-combine-loaders": "^2.0.3"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^4.2.1",
+    "prettier": "^1.7.0"
   }
 }
