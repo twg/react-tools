@@ -14,7 +14,7 @@
     "trt": "bin/trt.js"
   },
   "lint-staged": {
-    "*.{js,json}": ["prettier --write", "git add"]
+    "*.{js,json,css}": ["prettier --write", "git add"]
   },
   "dependencies": {
     "@storybook/addon-info": "^3.1.9",

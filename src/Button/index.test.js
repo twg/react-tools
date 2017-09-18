@@ -7,7 +7,9 @@ import Button from './Button'
 
 it('matches snapshot', () => {
   let wrapper = mount(
-    <Button size='primary' color='orange'>Register</Button>
+    <Button size="primary" color="orange">
+      Register
+    </Button>
   )
 
   expect(toJson(wrapper)).toMatchSnapshot()

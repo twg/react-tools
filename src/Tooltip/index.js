@@ -10,12 +10,8 @@ const Tooltip = props => {
 
   return (
     <div className={tooltipClasses}>
-      <span className={css.trigger}>
-        {props.children}
-      </span>
-      <div className={popoverClasses}>
-        {props.content}
-      </div>
+      <span className={css.trigger}>{props.children}</span>
+      <div className={popoverClasses}>{props.content}</div>
     </div>
   )
 }

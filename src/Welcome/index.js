@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Welcome = props =>
+const Welcome = props => (
   <div>
     <h1>Welcome to the React Component Library</h1>
     <p>
@@ -18,7 +18,8 @@ const Welcome = props =>
       This component library is most effective when used hand in hand with TRT,
       which you can find additional documentation for on{' '}
       <a href="https://github.com/twg/react-component-library">
-        {' '}our github page
+        {' '}
+        our github page
       </a>.
     </p>
     <p>
@@ -37,6 +38,7 @@ const Welcome = props =>
       section in the storybook documentation for story examples.
     </p>
   </div>
+)
 
 Welcome.displayName = 'Welcome'
 Welcome.propTypes = {

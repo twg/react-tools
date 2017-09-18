@@ -26,9 +26,7 @@ export default function() {
 
       return (
         <div style={{ margin: '50px' }}>
-          <div>
-            {`Value passed into tooltip's content: ${tooltipContent}`}
-          </div>
+          <div>{`Value passed into tooltip's content: ${tooltipContent}`}</div>
           <Tooltip content={renderedVal}>Hover me</Tooltip>
         </div>
       )
