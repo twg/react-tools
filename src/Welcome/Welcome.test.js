@@ -1,8 +1,15 @@
 /* eslint-env jest */
 
 import React from 'react'
-import Welcome from './Welcome'
+import renderer from 'react-test-renderer'
+import { Welcome } from './'
 
 describe('Welcome', () => {
-  <Welcome />
+  it('matches snapshot', () => {
+    let component = renderer.create(
+      <Welcome />
+    )
+
+    expect(component.toJSON()).toMatchSnapshot()
+  })
 })
