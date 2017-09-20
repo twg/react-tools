@@ -1,0 +1,14 @@
+{
+  "testMatch": [
+    "<rootDir>/src/**/?(*.)(spec|test).js?(x)",
+    "<rootDir>/src/**/**/?(*.)(spec|test).js?(x)"
+  ],
+  "testEnvironment": "node",
+  "transform": {
+    "^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest"
+  },
+  "transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"],
+  "moduleNameMapper": {
+    "^.+\\.s?css$": "identity-obj-proxy"
+  }
+}

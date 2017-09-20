@@ -1,8 +1,15 @@
 /* eslint-env jest */
 
 import React from 'react'
-import Combo from './Combo'
+import renderer from 'react-test-renderer'
+import { Combo } from './'
 
 describe('Combo', () => {
-  ;<Combo />
+  it('matches snapshot', () => {
+    let component = renderer.create(
+      <Combo />
+    )
+
+    expect(component.toJSON()).toMatchSnapshot()
+  })
 })
