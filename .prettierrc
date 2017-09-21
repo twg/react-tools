@@ -1,7 +1,7 @@
 {
   "semi": false,
   "trailingComma": "none",
-  "parser": "typescript",
+  "parser": "babylon",
   "singleQuote": true,
   "tabWidth": 2,
   "useTabs": false,
