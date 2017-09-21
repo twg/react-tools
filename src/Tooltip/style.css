@@ -42,20 +42,20 @@
 
 .popover:after {
   content: '';
-    position: absolute;
-    top: 100%;
-    left: 11px;
-    border: 9px solid transparent;
-    border-top-color: #143642;
+  position: absolute;
+  top: 100%;
+  left: 11px;
+  border: 9px solid transparent;
+  border-top-color: #143642;
 }
 
 .popover.before {
   content: '';
-    position: absolute;
-    top: 100%;
-    left: 10px;
-    border: 10px solid transparent;
-    border-top-color: #143642;
+  position: absolute;
+  top: 100%;
+  left: 10px;
+  border: 10px solid transparent;
+  border-top-color: #143642;
 }
 
 .trigger {

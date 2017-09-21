@@ -9,11 +9,7 @@ const Grid = props => {
     props.className || ''
   ].join(' ')
 
-  return (
-    <div className={classes}>
-      {props.children}
-    </div>
-  )
+  return <div className={classes}>{props.children}</div>
 }
 
 export default Grid

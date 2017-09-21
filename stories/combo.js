@@ -94,12 +94,8 @@ export default function() {
 
       return (
         <Combo rev={rev}>
-          <ComboFirst>
-            {comboFirstVal}
-          </ComboFirst>
-          <ComboLast>
-            {comboLastVal}
-          </ComboLast>
+          <ComboFirst>{comboFirstVal}</ComboFirst>
+          <ComboLast>{comboLastVal}</ComboLast>
         </Combo>
       )
     },

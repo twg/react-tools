@@ -2,27 +2,15 @@ import React, { PropTypes } from 'react'
 import styles from './style.css'
 
 const Combo = props => {
-  return (
-    <div className={getComboClasses(props)}>
-      {props.children}
-    </div>
-  )
+  return <div className={getComboClasses(props)}>{props.children}</div>
 }
 
 const ComboFirst = props => {
-  return (
-    <div className={styles.first}>
-      {props.children}
-    </div>
-  )
+  return <div className={styles.first}>{props.children}</div>
 }
 
 const ComboLast = props => {
-  return (
-    <div className={styles.last}>
-      {props.children}
-    </div>
-  )
+  return <div className={styles.last}>{props.children}</div>
 }
 
 function getComboClasses(props) {

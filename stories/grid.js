@@ -61,11 +61,7 @@ export default function() {
       return (
         <Grid>
           {settings.map((setting, index) => {
-            return (
-              <GridItem {...setting}>
-                Column {index + 1}
-              </GridItem>
-            )
+            return <GridItem {...setting}>Column {index + 1}</GridItem>
           })}
         </Grid>
       )

@@ -19,7 +19,7 @@ export default function() {
     .addWithInfo(
       'General Overview',
       `This is a basic button with various sizes.`,
-      () =>
+      () => (
         <div>
           <Button size="hero" color="green">
             Become a member
@@ -30,29 +30,32 @@ export default function() {
           <Button size="secondary" color="grey">
             Watch
           </Button>
-        </div>,
+        </div>
+      ),
       { inline: true }
     )
     .addWithInfo(
       'simple usage',
       `This is the basic usage with the button with providing a label to show the text.`,
-      () =>
+      () => (
         <Button size="hero" onClick={action('clicked')}>
           Become a member
-        </Button>,
+        </Button>
+      ),
       { inline: true, source: true, header: false }
     )
     .addWithInfo(
       'Sandbox',
       'Play around',
-      () =>
+      () => (
         <Button
           color={select('Color', ['grey', 'green', 'orange'], 'grey')}
           size={select('Size', ['hero', 'primary', 'secondary'], 'hero')}
           noMargin={boolean('noMargin', true)}
         >
           {text('Label', 'Hello Button')}
-        </Button>,
+        </Button>
+      ),
       { inline: true, source: true, header: false }
     )
 }
