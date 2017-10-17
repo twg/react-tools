@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 
-import { Button } from '../'
 import css from './style.css'
 
 class InlineEdit extends Component {
@@ -69,8 +68,8 @@ class InlineEdit extends Component {
     }
 
     return (
-      <div>
-        <div>
+      <div className={css.inlineEditContainer}>
+        <div className={css.left}>
           <input
             ref={input => input && input.focus()}
             onKeyDown={this.handleKeyboardShortcuts}
@@ -79,13 +78,9 @@ class InlineEdit extends Component {
             className={css.inlineInput}
           />
         </div>
-        <div>
-          <Button design="primary" onClick={this.handleSave}>
-            Save
-          </Button>
-          <Button design="secondary" onClick={this.handleCancel}>
-            Cancel
-          </Button>
+        <div className={css.right}>
+          <button onClick={this.handleSave}>Save</button>
+          <button onClick={this.handleCancel}>Cancel</button>
         </div>
       </div>
     )
