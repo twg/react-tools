@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Grid and GridItem Grid and GridItem matches snapshot 1`] = `
+<div
+  className="grid   "
+>
+  <div
+    className="gridItem         "
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Grid and GridItem Grid matches snapshot 1`] = `
+<div
+  className="grid   "
+/>
+`;

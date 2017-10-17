@@ -2,13 +2,11 @@
 
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { Combo } from './'
+import { Tooltip } from './'
 
-describe('Combo', () => {
+describe('Tooltip', () => {
   it('matches snapshot', () => {
-    let component = renderer.create(
-      <Combo />
-    )
+    let component = renderer.create(<Tooltip />)
 
     expect(component.toJSON()).toMatchSnapshot()
   })
