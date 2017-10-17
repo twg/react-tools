@@ -26,8 +26,3 @@ const localStorageMock = (function() {
 Object.defineProperty(window, 'localStorage', {
   value: localStorageMock
 })
-
-Object.defineProperty(window.location, 'href', {
-  writable: true,
-  value: 'some url'
-})
