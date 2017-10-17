@@ -1,11 +1,17 @@
 /* eslint-env jest */
 
-import React from 'react'
+import React, { Component } from 'react'
 import renderer from 'react-test-renderer'
 import { ErrorBoundary } from './'
 
-const ErrorView = () => {
-  return null
+class ErrorView extends Component {
+  throwErrorInRender() {
+    throw new Error('YOLO')
+  }
+
+  render() {
+    return <div>{this.throwErrorInRender()}</div>
+  }
 }
 
 describe('Error Boundary', () => {
