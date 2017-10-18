@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react'
 import React from 'react'
 
 import { InlineEdit } from '../src'
+import StoryContainer from './storyContainer'
 
 export default function() {
   const stories = storiesOf('Inline Edit', module)
@@ -13,10 +14,12 @@ export default function() {
     () => {
       const editableText = text('originalText', 'Lorem Ipsum')
       return (
-        <InlineEdit
-          originalText={editableText}
-          onChange={text => alert(text)}
-        />
+        <StoryContainer>
+          <InlineEdit
+            originalText={editableText}
+            onChange={text => alert(text)}
+          />
+        </StoryContainer>
       )
     },
     { inline: true }
