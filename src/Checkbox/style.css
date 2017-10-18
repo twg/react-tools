@@ -1,0 +1,88 @@
+.labelCheckbox {
+  user-select: none;
+  cursor: pointer;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.labelCheckbox input:checked + .checkbox {
+  border-color: grey;
+}
+
+.labelCheckbox input:checked + .checkbox svg path {
+  fill: red;
+  stroke: red;
+  stroke-width: 2;
+  stroke-dashoffset: 0;
+}
+
+.labelCheckbox input:checked + .checkbox svg polyline {
+  stroke-dashoffset: 0;
+}
+.labelCheckbox input:hover + .checkbox svg path {
+  stroke-dashoffset: 0;
+}
+
+.checkbox {
+  position: relative;
+  top: 0px;
+  float: left;
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid grey;
+  border-radius: 3px;
+}
+
+.checkbox svg {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+}
+
+.checkbox svg path {
+  fill: none;
+  stroke: red;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 71px;
+  stroke-dashoffset: 71px;
+  transition: all 0.6s ease;
+}
+
+.checkbox svg polyline {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 18px;
+  stroke-dashoffset: 18px;
+  transition: all 0.3s ease;
+}
+
+.checkbox span {
+  pointer-events: none;
+  vertical-align: middle;
+  font-family: sans;
+}
+
+.checkBoxContainer {
+  width: 200px;
+  text-align: center;
+}
+
+.checkBoxContainer.disabled .labelCheckbox .checkbox {
+  background: grey;
+}
+
+input.invisible {
+  position: absolute;
+  left: -32px;
+  top: -1px;
+  z-index: 10;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+}
