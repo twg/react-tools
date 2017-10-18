@@ -4,6 +4,8 @@ import React, { Component } from 'react'
 import renderer from 'react-test-renderer'
 import { ErrorBoundary } from './'
 
+console.error = jest.fn()
+
 class ErrorView extends Component {
   throwErrorInRender() {
     throw new Error('YOLO')
@@ -23,5 +25,6 @@ describe('Error Boundary', () => {
     )
 
     expect(component.toJSON()).toMatchSnapshot()
+    expect(console.error).toHaveBeenCalled()
   })
 })
