@@ -16,8 +16,7 @@ class ErrorView extends Component {
 
 describe('Error Boundary', () => {
   it('matches snapshot', () => {
-    let component
-    component = renderer.create(
+    let component = renderer.create(
       <ErrorBoundary>
         <ErrorView />
       </ErrorBoundary>
