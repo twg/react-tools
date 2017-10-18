@@ -23,6 +23,7 @@
   stroke-dashoffset: 0;
 }
 
+/* Alter the size of the visible checkbox below */
 .checkbox {
   position: relative;
   top: 0px;
@@ -33,6 +34,18 @@
   border: 2px solid grey;
   border-radius: 3px;
 }
+
+.checkbox svg polyline {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 18px;
+  stroke-dashoffset: 18px;
+  transition: all 0.3s ease;
+}
+/* Alter the size of the visible checkbox above */
 
 .checkbox svg {
   position: absolute;
@@ -49,17 +62,6 @@
   stroke-dasharray: 71px;
   stroke-dashoffset: 71px;
   transition: all 0.6s ease;
-}
-
-.checkbox svg polyline {
-  fill: none;
-  stroke: #fff;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: 18px;
-  stroke-dashoffset: 18px;
-  transition: all 0.3s ease;
 }
 
 .checkbox span {

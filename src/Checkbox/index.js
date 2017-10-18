@@ -44,7 +44,8 @@ Checkbox.propTypes = {
    */
   label: PropTypes.string.isRequired,
   /**
-   * Event to fire when checkbox changes
+   * Event to fire when checkbox changes, passes the checkbox value as
+   * an argument onChange={value => handleNewValue(value)}
    */
   onChange: PropTypes.func.isRequired,
   /**
