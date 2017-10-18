@@ -1,16 +1,23 @@
 /* eslint-env jest */
 import React from 'react'
-import { mount } from 'enzyme'
-import toJson from 'enzyme-to-json'
+import renderer from 'react-test-renderer'
+import cases from 'jest-in-case'
+import { Button } from './'
 
-import Button from './Button'
-
-it('matches snapshot', () => {
-  let wrapper = mount(
-    <Button size="primary" color="orange">
-      Register
-    </Button>
-  )
-
-  expect(toJson(wrapper)).toMatchSnapshot()
-})
+cases(
+  'matches snapshots',
+  opts => {
+    expect(
+      renderer.create(<Button {...opts.props}>Label</Button>).toJSON()
+    ).toMatchSnapshot()
+  },
+  [
+    { name: 'primary', props: { size: 'primary', color: 'orange' } },
+    { name: 'hero', props: { size: 'hero', color: 'orange' } },
+    { name: 'secondary', props: { size: 'secondary', color: 'orange' } },
+    {
+      name: 'noMargin',
+      props: { size: 'primary', color: 'orange', noMargin: true }
+    }
+  ]
+)

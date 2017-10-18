@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tooltip matches snapshot 1`] = `
+<div
+  className="tooltip"
+>
+  <span
+    className="trigger"
+  />
+  <div
+    className="popover "
+  />
+</div>
+`;

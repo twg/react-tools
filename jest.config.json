@@ -1,0 +1,18 @@
+{
+  "testMatch": [
+    "<rootDir>/src/**/?(*.)(spec|test).js?(x)",
+    "<rootDir>/src/**/**/?(*.)(spec|test).js?(x)"
+  ],
+  "setupFiles": ["<rootDir>/jest/testSetup.js"],
+  "testEnvironment": "node",
+  "transform": {
+    "^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest"
+  },
+  "transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"],
+  "moduleNameMapper": {
+    "^.+\\.s?css$": "identity-obj-proxy",
+    "^.+\\.svg$": "<rootDir>/jest/svgMock.js",
+    "\\.(jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
+      "<rootDir>/jest/fileMock.js"
+  }
+}

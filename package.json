@@ -8,7 +8,8 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "test": "jest --env=jsdom --config=jest.config.json"
   },
   "bin": {
     "trt": "bin/trt.js"
@@ -21,11 +22,17 @@
     "@storybook/addon-knobs": "^3.2.12",
     "@storybook/react": "^3.2.12",
     "babel-core": "^6.22.1",
+    "babel-jest": "^21.0.2",
     "babel-loader": "^6.2.10",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-react": "^6.22.0",
     "babel-preset-stage-2": "^6.22.0",
     "css-loader": "^0.26.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^21.1.0",
+    "jest-fetch-mock": "^1.2.1",
+    "jest-in-case": "^1.0.2",
+    "react-test-renderer": "^16.0.0",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
