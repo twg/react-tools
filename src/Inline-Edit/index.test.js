@@ -5,6 +5,7 @@ import renderer from 'react-test-renderer'
 import { InlineEdit } from './'
 
 const noop = () => {}
+
 describe('InlineEdit', () => {
   it('matches snapshot', () => {
     let component = renderer.create(
