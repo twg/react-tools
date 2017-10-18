@@ -39,22 +39,41 @@ class CheckboxWrapper extends Component {
 export default function() {
   const stories = storiesOf('Checkbox', module)
   stories.addDecorator(withKnobs)
-  stories.addWithInfo(
-    'General Overview',
-    `A checkbox. The props value and onChange are required! `,
-    () => {
-      return (
-        <StoryContainer>
-          <CheckboxWrapper>
+  stories
+    .addWithInfo(
+      'General Overview',
+      `A checkbox. The props value and onChange are required! `,
+      () => {
+        return (
+          <StoryContainer>
+            <CheckboxWrapper>
+              <Checkbox
+                id={text('id', 'sample_id')}
+                disabled={boolean('disabledValue', false)}
+                label={text('label', 'Example Label')}
+              />
+            </CheckboxWrapper>
+          </StoryContainer>
+        )
+      },
+      { inline: true }
+    )
+    .addWithInfo(
+      'All the props',
+      `In this example you can view and modify all the props, but because the Checkbox onChange is controlled by the parent, checking the checkbox won't work here.`,
+      () => {
+        return (
+          <StoryContainer>
             <Checkbox
               id={text('id', 'sample_id')}
               disabled={boolean('disabledValue', false)}
               label={text('label', 'Example Label')}
+              value={boolean('checked', false)}
+              onChange={event => alert(event.target.checked)}
             />
-          </CheckboxWrapper>
-        </StoryContainer>
-      )
-    },
-    { inline: true }
-  )
+          </StoryContainer>
+        )
+      },
+      { inline: true }
+    )
 }
