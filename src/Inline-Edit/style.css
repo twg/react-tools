@@ -1,0 +1,41 @@
+.inlineInput {
+  border: 1px solid black;
+}
+
+.editableContainer {
+  width: 147px;
+  background: #eeeeee;
+  padding: 10px;
+}
+
+.inlineEditContainer {
+  width: 300px;
+}
+
+.inlineEditContainer input {
+  padding: 10px;
+}
+
+.left,
+.right {
+  display: inline-block;
+}
+
+.left {
+  width: 45%;
+}
+
+.right {
+  width: 40%;
+  text-align: right;
+}
+
+.right button {
+  padding: 5px 10px;
+  border: none;
+  background: white;
+}
+
+.right button:hover {
+  background: #eeeeee;
+}
