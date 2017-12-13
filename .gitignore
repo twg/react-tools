@@ -1,4 +1,4 @@
 node_modules
 storybook-static/
-.vscode
+.vscode 
 .DS_Store

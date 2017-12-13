@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InlineEdit matches snapshot 1`] = `
+<div
+  className="editableContainer"
+  onClick={[Function]}
+>
+  foo
+</div>
+`;
