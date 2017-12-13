@@ -1,0 +1,35 @@
+.expander {
+  border: 1px solid #888;
+  height: 13px;
+  width: 26px;
+  background-color: #eee;
+  border-radius: 2px;
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.expander:hover {
+  color: #fff;
+  background-color: #4078c0;
+}
+
+.expanderWrapper {
+  position: relative;
+  vertical-align: middle;
+  margin: 5px 0px;
+}
+
+.expanderWrapper.inline {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.dots {
+  line-height: 6px;
+  font-size: 12px;
+  padding: 0 5px 5px;
+}

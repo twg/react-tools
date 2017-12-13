@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Truncate matches snapshots basic 1`] = `
+<div
+  className="truncate"
+>
+  "The quick brown fox jumps over the lazy dog" is an English-language pangram—a sentence that contains
+  <div
+    className="expanderWrapper "
+  >
+    <div
+      className="expander"
+      onClick={[Function]}
+    >
+      <span
+        className="dots"
+      >
+        ...
+      </span>
+    </div>
+  </div>
+  <div />
+</div>
+`;
+
+exports[`Truncate matches snapshots custom fudge factor 1`] = `
+<div
+  className="truncate"
+>
+  "The quick brown fox jumps over the lazy dog" is an English-language pangram—a sentence that contains
+  <div
+    className="expanderWrapper "
+  >
+    <div
+      className="expander"
+      onClick={[Function]}
+    >
+      <span
+        className="dots"
+      >
+        ...
+      </span>
+    </div>
+  </div>
+  <div />
+</div>
+`;
+
+exports[`Truncate matches snapshots custom truncate point 1`] = `
+<div
+  className="truncate"
+>
+  "The quick brown fox jumps over the lazy dog" is an English-language pangram—a sentence that contains
+  <div
+    className="expanderWrapper "
+  >
+    <div
+      className="expander"
+      onClick={[Function]}
+    >
+      <span
+        className="dots"
+      >
+        ...
+      </span>
+    </div>
+  </div>
+  <div />
+</div>
+`;
+
+exports[`Truncate matches snapshots inline 1`] = `
+<div
+  className="truncate"
+>
+  "The quick brown fox jumps over the lazy dog" is an English-language pangram—a sentence that contains
+  <div
+    className="expanderWrapper "
+  >
+    <div
+      className="expander"
+      onClick={[Function]}
+    >
+      <span
+        className="dots"
+      >
+        ...
+      </span>
+    </div>
+  </div>
+  <div />
+</div>
+`;
