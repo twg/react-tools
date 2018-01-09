@@ -1,0 +1,38 @@
+.button {
+  font-weight: 300;
+  color: white;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  border-width: 1px;
+  border-style: solid;
+  transition: 0.2s all;
+  margin-bottom: 24px;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+/* Button.props.size */
+.hero {
+  font-size: 18px;
+  width: 240px;
+  height: 50px;
+}
+
+.primary {
+  width: 100%;
+  height: 40px;
+}
+
+.secondary {
+  width: 100px;
+  height: 32px;
+  font-size: 13px;
+  line-height: 29px;
+}
+
+/* Button.propTypes.noMargin */
+.noMargin {
+  margin: 0;
+}
