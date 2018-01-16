@@ -40,12 +40,7 @@ export default function() {
           />
         )
       },
-      // <Button
-      //   color={select('Color', ['grey', 'green', 'orange'], 'grey')}
-      //   size={select('Size', ['hero', 'primary', 'secondary'], 'hero')}
-      // >
-      //   {text('Label', 'Hello Button')}
-      // </Button>
+
       { inline: true, source: true, header: false }
     )
 }
