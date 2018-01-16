@@ -1,61 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`matches snapshots hero 1`] = `
-<button
-  className="button hero"
-  onClick={undefined}
-  style={
-    Object {
-      "background": "orange",
-    }
-  }
-  type="button"
->
-  Label
-</button>
-`;
-
-exports[`matches snapshots noMargin 1`] = `
-<button
-  className="button primary noMargin"
-  onClick={undefined}
-  style={
-    Object {
-      "background": "orange",
-    }
-  }
-  type="button"
->
-  Label
-</button>
-`;
-
 exports[`matches snapshots primary 1`] = `
-<button
-  className="button primary"
-  onClick={undefined}
-  style={
-    Object {
-      "background": "orange",
+<div>
+  <label
+    htmlFor="id"
+  >
+    <div>
+      File input test:
+    </div>
+  </label>
+  <input
+    accept={undefined}
+    disabled={undefined}
+    id="id"
+    multiple={false}
+    onChange={[Function]}
+    style={
+      Object {
+        "display": "none",
+      }
     }
-  }
-  type="button"
->
-  Label
-</button>
-`;
-
-exports[`matches snapshots secondary 1`] = `
-<button
-  className="button secondary"
-  onClick={undefined}
-  style={
-    Object {
-      "background": "orange",
-    }
-  }
-  type="button"
->
-  Label
-</button>
+    type="file"
+  />
+</div>
 `;

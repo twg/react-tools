@@ -29,19 +29,23 @@ export default function() {
     .addWithInfo(
       'Sandbox',
       'Play around',
-      () => (
-        <FileInput
-          label={text('Label', 'Hello Button')}
-          disabled={boolean('disabled', true)}
-          showFilename={boolean('showFilename', true)}
-        />
-        // <Button
-        //   color={select('Color', ['grey', 'green', 'orange'], 'grey')}
-        //   size={select('Size', ['hero', 'primary', 'secondary'], 'hero')}
-        // >
-        //   {text('Label', 'Hello Button')}
-        // </Button>
-      ),
+      () => {
+        const label = text('Label', 'Hello Button')
+        const labelVal = <div dangerouslySetInnerHTML={{ __html: label }} />
+        return (
+          <FileInput
+            label={labelVal}
+            disabled={boolean('disabled', true)}
+            showFilename={boolean('showFilename', true)}
+          />
+        )
+      },
+      // <Button
+      //   color={select('Color', ['grey', 'green', 'orange'], 'grey')}
+      //   size={select('Size', ['hero', 'primary', 'secondary'], 'hero')}
+      // >
+      //   {text('Label', 'Hello Button')}
+      // </Button>
       { inline: true, source: true, header: false }
     )
 }
