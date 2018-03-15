@@ -8,7 +8,7 @@ if [ $# -lt 2 ]; then
 fi
 
 if [ "$1" == "classComponent" ]; then
-supplied_name=$2
+supplied_name=${2//[-.]/} # remove hyphens and periods
 
 # Capitalized version of the component name
 Name="$(tr '[:lower:]' '[:upper:]' <<< ${supplied_name:0:1})${supplied_name:1}"
