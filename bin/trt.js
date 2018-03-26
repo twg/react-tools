@@ -1,79 +1,39 @@
-#! /usr/bin/env node
 const shell = require('shelljs')
+const prog = require('caporal')
 
-const ARGS = process.argv.slice(2)
+const wizard = require('./scripts/componentCreationWizard')
+const include = require('./scripts/include')
 
-const USAGE = `
-  Usage:
-    trt generate sc ComponentName           # Scaffold a new, empty React stateless component
-    trt generate cc ComponentName           # Scaffold a new, empty React class component
-    trt include ComponentName [path]        # Include a component from the Library at path
-    trt storybook                           # Start Storybook on http://localhost:6006
-    trt -h, --help                          # Print this message
-`
+prog.version('1.0.0')
 
-const mainCommand = ARGS[0]
-const modifier = ARGS[1]
-const target = ARGS[2]
+prog
+  .command('generate', 'Generate a component')
+  .alias('g')
+  .action(function(args, options, logger) {
+    wizard.start()
+  })
 
-const help = () => {
-  console.log(USAGE)
-}
+// TODO -- get list of all folders in src and place them as args
+prog
+  .command('include', 'Include a component from the library')
+  .alias('i')
+  .argument('<name>', 'Name of existing component')
+  .argument('[target]', 'Target location to place component')
+  .action(function(args, options, logger) {
+    let { target, name } = args
 
-const generate = (modifier, target) => {
-  switch (modifier) {
-    case 'sc':
-      shell.exec(
-        `bash ${__dirname}/scripts/generateStatelessComponent.sh statelessComponent ${target ||
-          ''}`
-      )
-      break
-    case 'cc':
-      shell.exec(
-        `bash ${__dirname}/scripts/generateClassComponent.sh classComponent ${target ||
-          ''}`
-      )
-      break
-    default:
-      help()
-      break
-  }
-}
+    if (target === undefined) {
+      target = '.'
+    }
 
-const include = (modifier, target) => {
-  if (!modifier) {
-    help()
-    return
-  }
+    include(name, target)
+  })
 
-  if (!target) {
-    target = '.'
-  }
+prog
+  .command('storybook', 'Start a local version of storybook')
+  .alias('sb')
+  .action(function() {
+    shell.exec(`npm run --prefix ${__dirname}/../ storybook`)
+  })
 
-  shell.exec(
-    `bash ${__dirname}/scripts/includeComponent.sh ${modifier} ${target}`
-  )
-}
-
-const storybook = () => {
-  shell.exec(`npm run --prefix ${__dirname}/../ storybook`)
-}
-;(function main() {
-  switch (mainCommand) {
-    case 'generate':
-    case '-g':
-      generate(modifier, target)
-      break
-    case 'include':
-    case '-i':
-      include(modifier, target)
-      break
-    case 'storybook':
-    case 'sb':
-      storybook()
-      break
-    default:
-      help()
-      break
-  }
-})()
+prog.parse(process.argv)
