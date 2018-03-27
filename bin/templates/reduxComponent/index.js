@@ -4,9 +4,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 class __UPPER_CAMEL_NAME__Component extends Component {
-  constructor(props) {
-    super(props)
-  }
+  state = {}
 
   componentDidMount() {}
 

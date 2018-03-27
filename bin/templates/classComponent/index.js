@@ -2,9 +2,7 @@ import React, { Component } from 'react'
 import css from './style.css'
 
 export class __UPPER_CAMEL_NAME__ extends Component {
-  constructor(props) {
-    super(props)
-  }
+  state = {}
 
   componentDidMount() {}
 
