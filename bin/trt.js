@@ -19,14 +19,15 @@ prog
   .alias('i')
   .argument('<name>', 'Name of existing component')
   .argument('[target]', 'Target location to place component')
-  .action(function(args, options, logger) {
+  .action(async function(args, options, logger) {
     let { target, name } = args
 
     if (target === undefined) {
       target = '.'
     }
 
-    include(name, target)
+    await include(name, target)
+    console.log(`${name} included in your project ✨`)
   })
 
 prog

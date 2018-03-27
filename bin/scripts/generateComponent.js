@@ -1,6 +1,7 @@
 const _ = require('lodash')
-const copy = require('./copy')
 const replace = require('replace-in-file')
+
+const copy = require('./copy')
 
 const generateComponent = async ({ type, redux, name, target }) => {
   const names = {
@@ -16,10 +17,10 @@ const generateComponent = async ({ type, redux, name, target }) => {
     to: [names.__UPPER_CAMEL_NAME__, names.__LOWER_CAMEL_NAME__]
   }
 
+  /* Depending on the type of component that we're creating, copy from template location */
   switch (type) {
     case 'class component':
       const path = `${basePath}/${redux ? 'reduxComponent' : 'classComponent'}`
-      console.log(path, redux)
       await copy(path, targetPath)
       break
     case 'stateless component':
@@ -32,7 +33,9 @@ const generateComponent = async ({ type, redux, name, target }) => {
       break
   }
 
+  /* Replace template string variables in newly created folder */
   replace.sync(options)
+  console.log(`${name} created ✨`)
 }
 
 module.exports = generateComponent

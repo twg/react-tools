@@ -43,11 +43,12 @@ const QUESTIONS = [
 ]
 
 const start = () => {
-  console.log('Hi, welcome to The TRT wizard')
+  console.log('Hiya, welcome to The TRT wizard')
 
   inquirer.prompt(QUESTIONS).then(answers => {
-    console.log('\nComponent to Generate:')
-    console.log(JSON.stringify(answers, null, '  '))
+    // Leaving these here for future debugging
+    // console.log('\nComponent to Generate:')
+    // console.log(JSON.stringify(answers, null, '  '))
 
     generateComponent(answers)
   })
