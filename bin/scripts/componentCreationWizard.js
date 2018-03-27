@@ -11,6 +11,13 @@ const QUESTIONS = [
     default: 'Component Name',
     filter: function(val) {
       return val.toLowerCase()
+    },
+    validate: function(value) {
+      if (value !== 'Component Name') {
+        return true
+      }
+
+      return 'Please enter a desired component name'
     }
   },
   {
