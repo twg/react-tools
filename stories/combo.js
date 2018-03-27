@@ -14,8 +14,7 @@ import {
 import { Combo, ComboFirst, ComboLast } from '../src'
 
 export default function() {
-  const stories = storiesOf('Combo', module)
-  // stories.addDecorator(withKnobs)
+  const stories = storiesOf('Combo', module).addDecorator(withKnobs)
   stories
     .add(
       'General Overview',

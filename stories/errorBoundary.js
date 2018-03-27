@@ -37,9 +37,8 @@ class Broken extends Component {
 }
 
 export default function() {
-  const stories = storiesOf('ErrorBoundary', module)
+  const stories = storiesOf('ErrorBoundary', module).addDecorator(withKnobs)
 
-  // stories.addDecorator(withKnobs)
   stories.add(
     'General Overview',
     withInfo({

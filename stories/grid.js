@@ -45,8 +45,7 @@ function getSettings(index) {
 }
 
 export default function() {
-  const stories = storiesOf('Grid', module)
-  // stories.addDecorator(withKnobs)
+  const stories = storiesOf('Grid', module).addDecorator(withKnobs)
   stories.add(
     'General Overview',
     withInfo({

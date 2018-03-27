@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { storiesOf } from '@storybook/react'
+import { storiesOf, addDecorator } from '@storybook/react'
 import {
   withKnobs,
   text,
@@ -14,9 +14,8 @@ import { withInfo } from '@storybook/addon-info'
 import { Tooltip } from '../src'
 
 export default function() {
-  const stories = storiesOf('Tooltip', module)
-  // stories.addDecorator(withKnobs)
-  stories.add(
+  const stories = storiesOf('Tooltip', module).addDecorator(withKnobs)
+  stories.addDecorator(withKnobs).add(
     'General Overview',
     withInfo({
       text: `A tooltip component that can display any kind of content`,

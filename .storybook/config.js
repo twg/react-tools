@@ -1,5 +1,5 @@
 import { configure, setAddon } from '@storybook/react'
-
+import { withKnobs } from '@storybook/addon-knobs'
 import infoAddon from '@storybook/addon-info'
 
 setAddon(infoAddon)

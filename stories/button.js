@@ -14,8 +14,7 @@ import {
 import { Button } from '../src'
 
 export default function() {
-  const stories = storiesOf('Button', module)
-  // stories.addDecorator(withKnobs)
+  const stories = storiesOf('Button', module).addDecorator(withKnobs)
   stories
     .add(
       'General Overview',
@@ -51,7 +50,7 @@ export default function() {
     )
     .add(
       'Sandbox',
-      withInfo('Play around')(() => (
+      withInfo({ text: 'Play around', inline: true })(() => (
         <Button
           color={select('Color', ['grey', 'green', 'orange'], 'grey')}
           size={select('Size', ['hero', 'primary', 'secondary'], 'hero')}

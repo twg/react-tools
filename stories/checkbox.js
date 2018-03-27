@@ -38,8 +38,7 @@ class CheckboxWrapper extends Component {
 }
 
 export default function() {
-  const stories = storiesOf('Checkbox', module)
-  // stories.addDecorator(withKnobs)
+  const stories = storiesOf('Checkbox', module).addDecorator(withKnobs)
   stories
     .add(
       'General Overview',

@@ -7,8 +7,7 @@ import { InlineEdit } from '../src'
 import StoryContainer from './storyContainer'
 
 export default function() {
-  const stories = storiesOf('Inline Edit', module)
-  // stories.addDecorator(withKnobs)
+  const stories = storiesOf('Inline Edit', module).addDecorator(withKnobs)
   stories.add(
     'Basic Usage',
     withInfo({
