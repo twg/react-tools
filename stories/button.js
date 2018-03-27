@@ -1,6 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
+import { withInfo } from '@storybook/addon-info'
 import {
   withKnobs,
   text,
@@ -14,12 +15,14 @@ import { Button } from '../src'
 
 export default function() {
   const stories = storiesOf('Button', module)
-  stories.addDecorator(withKnobs)
+  // stories.addDecorator(withKnobs)
   stories
-    .addWithInfo(
+    .add(
       'General Overview',
-      `This is a basic button with various sizes.`,
-      () => (
+      withInfo({
+        inline: true,
+        text: `This is a basic button with various sizes.`
+      })(() => (
         <div>
           <Button size="hero" color="green">
             Become a member
@@ -31,23 +34,24 @@ export default function() {
             Watch
           </Button>
         </div>
-      ),
-      { inline: true }
+      ))
     )
-    .addWithInfo(
+    .add(
       'simple usage',
-      `This is the basic usage with the button with providing a label to show the text.`,
-      () => (
+      withInfo({
+        inline: true,
+        source: true,
+        header: false,
+        text: `This is the basic usage with the button with providing a label to show the text.`
+      })(() => (
         <Button size="hero" onClick={action('clicked')}>
           Become a member
         </Button>
-      ),
-      { inline: true, source: true, header: false }
+      ))
     )
-    .addWithInfo(
+    .add(
       'Sandbox',
-      'Play around',
-      () => (
+      withInfo('Play around')(() => (
         <Button
           color={select('Color', ['grey', 'green', 'orange'], 'grey')}
           size={select('Size', ['hero', 'primary', 'secondary'], 'hero')}
@@ -55,7 +59,6 @@ export default function() {
         >
           {text('Label', 'Hello Button')}
         </Button>
-      ),
-      { inline: true, source: true, header: false }
+      ))
     )
 }

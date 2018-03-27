@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import { withKnobs, boolean, text } from '@storybook/addon-knobs'
+import { withInfo } from '@storybook/addon-info'
 
 import { Checkbox } from '../src'
 import StoryContainer from './storyContainer'
@@ -38,12 +39,14 @@ class CheckboxWrapper extends Component {
 
 export default function() {
   const stories = storiesOf('Checkbox', module)
-  stories.addDecorator(withKnobs)
+  // stories.addDecorator(withKnobs)
   stories
-    .addWithInfo(
+    .add(
       'General Overview',
-      `A checkbox. The props value and onChange are required! `,
-      () => {
+      withInfo({
+        inline: true,
+        text: `A checkbox. The props value and onChange are required!`
+      })(() => {
         return (
           <StoryContainer>
             <CheckboxWrapper>
@@ -55,13 +58,14 @@ export default function() {
             </CheckboxWrapper>
           </StoryContainer>
         )
-      },
-      { inline: true }
+      })
     )
-    .addWithInfo(
+    .add(
       'All the props',
-      `In this example you can view and modify all the props, but because the Checkbox onChange is controlled by the parent, checking the checkbox won't work here.`,
-      () => {
+      withInfo({
+        inline: true,
+        text: `In this example you can view and modify all the props, but because the Checkbox onChange is controlled by the parent, checking the checkbox won't work here.`
+      })(() => {
         return (
           <StoryContainer>
             <Checkbox
@@ -73,7 +77,6 @@ export default function() {
             />
           </StoryContainer>
         )
-      },
-      { inline: true }
+      })
     )
 }

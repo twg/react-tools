@@ -9,6 +9,7 @@ import {
   object,
   select
 } from '@storybook/addon-knobs'
+import { withInfo } from '@storybook/addon-info'
 
 import { Grid, GridItem } from '../src'
 
@@ -45,11 +46,13 @@ function getSettings(index) {
 
 export default function() {
   const stories = storiesOf('Grid', module)
-  stories.addDecorator(withKnobs)
-  stories.addWithInfo(
+  // stories.addDecorator(withKnobs)
+  stories.add(
     'General Overview',
-    `This is a grid component to allow for grid style layouts in react`,
-    () => {
+    withInfo({
+      text: `This is a grid component to allow for grid style layouts in react`,
+      inline: true
+    })(() => {
       const totalCols = number('Column amount', 4)
 
       let settings = []
@@ -65,7 +68,6 @@ export default function() {
           })}
         </Grid>
       )
-    },
-    { inline: true }
+    })
   )
 }
