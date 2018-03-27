@@ -10,11 +10,14 @@ import {
   object,
   select
 } from '@storybook/addon-knobs'
+import { checkA11y } from '@storybook/addon-a11y'
 
 import { Button } from '../src'
 
 export default function() {
-  const stories = storiesOf('Button', module).addDecorator(withKnobs)
+  const stories = storiesOf('Button', module)
+    .addDecorator(withKnobs)
+    .addDecorator(checkA11y)
   stories
     .add(
       'General Overview',

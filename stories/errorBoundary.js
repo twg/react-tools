@@ -10,6 +10,7 @@ import {
   select
 } from '@storybook/addon-knobs'
 import { withInfo } from '@storybook/addon-info'
+import { checkA11y } from '@storybook/addon-a11y'
 
 import { ErrorBoundary } from '../src'
 
@@ -37,7 +38,9 @@ class Broken extends Component {
 }
 
 export default function() {
-  const stories = storiesOf('ErrorBoundary', module).addDecorator(withKnobs)
+  const stories = storiesOf('ErrorBoundary', module)
+    .addDecorator(withKnobs)
+    .addDecorator(checkA11y)
 
   stories.add(
     'General Overview',

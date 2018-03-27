@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import { withKnobs, boolean, text } from '@storybook/addon-knobs'
 import { withInfo } from '@storybook/addon-info'
+import { checkA11y } from '@storybook/addon-a11y'
 
 import { Checkbox } from '../src'
 import StoryContainer from './storyContainer'
@@ -38,7 +39,10 @@ class CheckboxWrapper extends Component {
 }
 
 export default function() {
-  const stories = storiesOf('Checkbox', module).addDecorator(withKnobs)
+  const stories = storiesOf('Checkbox', module)
+    .addDecorator(withKnobs)
+    .addDecorator(checkA11y)
+
   stories
     .add(
       'General Overview',

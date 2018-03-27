@@ -10,11 +10,15 @@ import {
   object,
   select
 } from '@storybook/addon-knobs'
+import { checkA11y } from '@storybook/addon-a11y'
 
 import { Combo, ComboFirst, ComboLast } from '../src'
 
 export default function() {
-  const stories = storiesOf('Combo', module).addDecorator(withKnobs)
+  const stories = storiesOf('Combo', module)
+    .addDecorator(withKnobs)
+    .addDecorator(checkA11y)
+
   stories
     .add(
       'General Overview',

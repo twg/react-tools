@@ -10,6 +10,7 @@ import {
   select
 } from '@storybook/addon-knobs'
 import { withInfo } from '@storybook/addon-info'
+import { checkA11y } from '@storybook/addon-a11y'
 
 import { Grid, GridItem } from '../src'
 
@@ -45,7 +46,8 @@ function getSettings(index) {
 }
 
 export default function() {
-  const stories = storiesOf('Grid', module).addDecorator(withKnobs)
+  const stories = storiesOf('Grid', module).addDecorator(checkA11y)
+
   stories.add(
     'General Overview',
     withInfo({

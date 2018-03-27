@@ -10,12 +10,16 @@ import {
   select
 } from '@storybook/addon-knobs'
 import { withInfo } from '@storybook/addon-info'
+import { checkA11y } from '@storybook/addon-a11y'
 
 import { Tooltip } from '../src'
 
 export default function() {
-  const stories = storiesOf('Tooltip', module).addDecorator(withKnobs)
-  stories.addDecorator(withKnobs).add(
+  const stories = storiesOf('Tooltip', module)
+    .addDecorator(withKnobs)
+    .addDecorator(checkA11y)
+
+  stories.add(
     'General Overview',
     withInfo({
       text: `A tooltip component that can display any kind of content`,

@@ -2,12 +2,16 @@ import { withKnobs, text } from '@storybook/addon-knobs'
 import { withInfo } from '@storybook/addon-info'
 import { storiesOf } from '@storybook/react'
 import React from 'react'
+import { checkA11y } from '@storybook/addon-a11y'
 
 import { InlineEdit } from '../src'
 import StoryContainer from './storyContainer'
 
 export default function() {
-  const stories = storiesOf('Inline Edit', module).addDecorator(withKnobs)
+  const stories = storiesOf('Inline Edit', module)
+    .addDecorator(withKnobs)
+    .addDecorator(checkA11y)
+
   stories.add(
     'Basic Usage',
     withInfo({
