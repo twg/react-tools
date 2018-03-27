@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import css from './style.css'
 
-class __UPPER_CAMEL_NAME__ extends Component {
+export class __UPPER_CAMEL_NAME__ extends Component {
   constructor(props) {
     super(props)
   }
@@ -9,7 +9,7 @@ class __UPPER_CAMEL_NAME__ extends Component {
   componentDidMount() {}
 
   render() {
-    return <div className={css.__LOWER_CAMEL_CLASS__} />
+    return <div className={css.__LOWER_CAMEL_NAME__} />
   }
 }
 
