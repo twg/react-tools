@@ -12,6 +12,9 @@ This suite of tools is comprised of a library of components and commands - inclu
 * A command line tool to copy these components into a project
 * A command to generate all files associated with a new component in the style that TWG prefers
 
+_*NEW!*_
+* Generate a react app with the structure that TWG prefers!
+
 # Installing && Updating
 You can easily add TRT to your globals by adding 
 
@@ -72,6 +75,27 @@ There are 2 arguments for this command:
 * Argument 2 is optional - this is the target location for the included component - default is current directory
 
 `trt include Tooltip` or `trt include Tooltip ./components`
+
+## Generate
+
+This command will create a new react app using TWG's style guide. This is an app that's been initialized with create react app (so you still get to use all those great utility scripts and configs), and has been updated to include a better folder structure for building apps on top of.
+
+This app will also include redux, as well as suggested ways to structure your stores
+
+The root command for this is: `trt create` (also available with `trt c`)
+
+### Create options
+
+This process is a guided wizard scenario, this wizard will guide you through the process of generating your app in a multi-step process
+
+* Step 1 asks you for your desired app name
+  * This field is required to be changed
+* Step 2 asks you for the place where you'd like your app to be created
+  * This defaults to your current directory
+* Step 3 asks if you'd like to include prettier in your app. If you select yes, this will include [prettier](https://prettier.io/) and add a pre-commit githook to auto execute prettier
+* Step 4 asks if you'd like to include a travis.yml setup in your app. If you select yes, this will include a [travis](https://travis-ci.com/) config file which includes at typical react app deploy process that includes S3
+
+![TRT in action](./trtcreate.gif "TRT in action")
 
 # Development
 ## Get started
