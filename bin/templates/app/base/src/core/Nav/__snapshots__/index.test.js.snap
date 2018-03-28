@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav matches snapshot 1`] = `
+<ul>
+  <li>
+    <a
+      href="/about"
+      onClick={[Function]}
+    >
+      About
+    </a>
+  </li>
+  <li>
+    <a
+      href="/users"
+      onClick={[Function]}
+    >
+      Fetching data
+    </a>
+  </li>
+</ul>
+`;

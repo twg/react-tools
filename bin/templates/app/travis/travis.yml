@@ -1,0 +1,26 @@
+language: node_js
+node_js:
+  - "7"
+cache:
+  directories:
+    - node_modules
+before_deploy:
+  - npm run build
+deploy:
+  - provider: s3
+    access_key_id: $STAGING_S3_ID
+    secret_access_key:
+      secure: $STAGING_S3_KEY
+    bucket: $STAGING_S3_BUCKET
+    region: $STAGING_S3_REGION
+    local-dir: build/admin
+    acl: public_read
+    skip_cleanup: true
+    on:
+      repo: $REPO
+      branch: master
+branches:
+  only:
+  - master
+notifications:
+  slack: $SLACK
