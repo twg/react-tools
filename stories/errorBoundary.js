@@ -9,6 +9,8 @@ import {
   object,
   select
 } from '@storybook/addon-knobs'
+import { withInfo } from '@storybook/addon-info'
+import { checkA11y } from '@storybook/addon-a11y'
 
 import { ErrorBoundary } from '../src'
 
@@ -37,19 +39,21 @@ class Broken extends Component {
 
 export default function() {
   const stories = storiesOf('ErrorBoundary', module)
+    .addDecorator(withKnobs)
+    .addDecorator(checkA11y)
 
-  // stories.addDecorator(withKnobs)
-  stories.addWithInfo(
+  stories.add(
     'General Overview',
-    `This is a generic error boundary component to wrap other components. (Note: After 
+    withInfo({
+      text: `This is a generic error boundary component to wrap other components. (Note: After 
       triggering the error in storybook, you'll have to refresh to reset it.)`,
-    () => (
+      inline: true
+    })(() => (
       <div>
         <ErrorBoundary>
           <Broken />
         </ErrorBoundary>
       </div>
-    ),
-    { inline: true }
+    ))
   )
 }

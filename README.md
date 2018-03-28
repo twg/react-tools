@@ -38,25 +38,27 @@ This starts Storybook on http://localhost:6006
 
 This command will generate a new react component using TWG's style guide - complete with a .js, .css, and testing file inside of a folder in the location that you run this command.
 
-The root command for this is: `trt generate`
+The root command for this is: `trt generate` (also available with `trt g`)
 
 ### Generate options
 
-There are currently two different options for generating:
-  * Stateless component
+There are currently three different options for generating:
   * Class component
+  * * Class component with Redux bootstrapped
+  * Stateless component
+  * Styled component
 
-If you're unsure about the difference between the two, [here](https://jaketrent.com/post/smart-dumb-components-react/) is an excellent resource.
+If you're unsure about the difference between stateless and class components, [here](https://jaketrent.com/post/smart-dumb-components-react/) is an excellent resource.
 
-There are 2 arguments for this command
+This process is a guided wizard scenario, this wizard will guide you through the process of generating your component in a multi-step process
 
-* Argument 1 is *required* and is the _type_ of component you want to create:
-  * `sc (stateless component)` or `cc (class component)`
-* Argument 2 is *required* and is the name of the component you want to create
+* Step 1 asks you for your desired Component name
+  * This field is required to be changed
+* Step 2 asks you for the place where you'd like your component to be generated
+  * This defaults to your current directory
+* Step 3 will guide you through asking which type of component you'd like to generate
 
-`trt generate sc MyComponent`
-or
-`trt generate cc MyComponent`
+![TRT in action](./trt.gif "TRT in action")
 
 ## Include
 
