@@ -1,7 +1,7 @@
 {
   "name": "twg-react-tools",
   "description": "Take a component, leave a component",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "twg",
   "license": "MIT",
   "private": false,
@@ -15,7 +15,10 @@
     "trt": "bin/trt.js"
   },
   "lint-staged": {
-    "*.{js,json,css}": ["prettier --write", "git add"]
+    "*.{js,json,css}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "dependencies": {
     "babel-core": "^6.22.1",
