@@ -1,0 +1,16 @@
+.card {
+    display: inline-block;
+    border: 1px solid rgb(199, 199, 199);
+    padding: 12px;
+    box-sizing: border-box;
+    min-width: 100px;    
+    min-height: 100px; 
+}
+
+.card.expand {
+    width: 100%;
+}
+
+.card.rounded {
+    border-radius: 4px;
+}

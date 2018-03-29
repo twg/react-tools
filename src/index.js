@@ -1,5 +1,6 @@
 export * from './Button/'
 export * from './Combo/'
+export * from './Card/'
 export * from './ErrorBoundary/'
 export * from './Grid/'
 export * from './Tooltip/'
