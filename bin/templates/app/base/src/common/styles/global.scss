@@ -1,0 +1,24 @@
+@import '_colors';
+@import '_typography';
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: $color-lemon;
+  min-height: 100%;
+  height: auto;
+  position: relative;
+}

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toggler matches snapshot 1`] = `
+<div>
+  <div>
+    Text
+     | 
+    <span
+      className="toggler"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "&darr;",
+        }
+      }
+      onClick={[Function]}
+    />
+  </div>
+  <div />
+</div>
+`;

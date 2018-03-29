@@ -1,0 +1,84 @@
+{
+  "name": "__KEBAB_NAME__",
+  "version": "0.1.0",
+  "description": "A sample React App for projects at TWG ",
+  "main": "index.js",
+  "scripts": {
+    "test":
+      "node scripts/test.js --env=jsdom --config=jest.config.json && yarn lint",
+    "lint": "eslint 'src/**/*.js' --max-warnings 0",
+    "start": "node scripts/start.js",
+    "build-staging":
+      "PUBLIC_URL=STAGING_URL API_URL=STAGING_API_URL BUILD_DIR=dist-staging node scripts/build.js",
+    "build-production":
+      "PUBLIC_URL=PROD_URL API_URL=PROD_API_URL BUILD_DIR=dist-production node scripts/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twg/react-guidelines.git"
+  },
+  "private": true,
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/twg/react-guidelines/issues"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "react-router-dom": "^4.1.1",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0",
+    "reselect": "^3.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "babel-core": "^6.25.0",
+    "babel-eslint": "^7.2.3",
+    "babel-jest": "^20.0.3",
+    "babel-loader": "^7.0.0",
+    "babel-preset-react-app": "^3.0.1",
+    "case-sensitive-paths-webpack-plugin": "^2.1.1",
+    "chalk": "^2.0.1",
+    "css-loader": "^0.28.4",
+    "dotenv": "^4.0.0",
+    "enzyme": "^2.8.2",
+    "eslint": "3.19",
+    "eslint-config-react-app": "^1.0.5",
+    "eslint-plugin-flowtype": "^2.35.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-react": "^7.1.0",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "file-loader": "^0.11.2",
+    "fs-extra": "^4.0.1",
+    "html-webpack-plugin": "^2.28.0",
+    "husky": "^0.14.3",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^20.0.4",
+    "lint-staged": "^7.0.0",
+    "node-sass": "^4.5.3",
+    "object-assign": "^4.1.1",
+    "postcss-flexbugs-fixes": "^3.2.0",
+    "postcss-loader": "^2.0.6",
+    "prettier": "^1.7.0",
+    "promise": "^8.0.1",
+    "prop-types": "^15.5.10",
+    "react-dev-utils": "^3.0.2",
+    "react-error-overlay": "^1.0.9",
+    "react-hot-loader": "v3.0.0-beta.7",
+    "react-test-renderer": "^15.6.1",
+    "sass-loader": "^6.0.6",
+    "standard": "^10.0.2",
+    "style-loader": "^0.18.2",
+    "sw-precache-webpack-plugin": "^0.11.4",
+    "url-loader": "^0.5.9",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5",
+    "webpack-manifest-plugin": "^1.2.1",
+    "whatwg-fetch": "^2.0.3"
+  }
+}

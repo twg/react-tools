@@ -1,7 +1,8 @@
 const shell = require('shelljs')
 const prog = require('caporal')
 
-const wizard = require('./scripts/componentCreationWizard')
+const componentWizard = require('./scripts/componentCreationWizard')
+const appWizard = require('./scripts/appCreationWizard')
 const include = require('./scripts/include')
 
 prog.version('1.0.0')
@@ -10,7 +11,14 @@ prog
   .command('generate', 'Generate a component')
   .alias('g')
   .action(function(args, options, logger) {
-    wizard.start()
+    componentWizard.start()
+  })
+
+prog
+  .command('create', 'Create a react app following TWG guidelines')
+  .alias('c')
+  .action(function(args, options, logger) {
+    appWizard.start()
   })
 
 // TODO -- get list of all folders in src and place them as args

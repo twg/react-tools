@@ -1,0 +1,12 @@
+.button {
+  padding: 10px;
+  color: white;
+  background-color: tomato;
+  border-radius: 5px;
+  border: none;
+  transition: 0.2s all;
+  &:hover {
+    cursor: pointer;
+    background-color: darken(tomato, 10%);
+  }
+}
