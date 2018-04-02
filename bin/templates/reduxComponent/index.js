@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import css from './style.css'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 
 class __UPPER_CAMEL_NAME__Component extends Component {
   state = {}

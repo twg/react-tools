@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import css from './style.css'
+import PropTypes from 'prop-types'
 
 export class __UPPER_CAMEL_NAME__ extends Component {
   state = {}
