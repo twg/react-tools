@@ -1,8 +1,26 @@
 /* eslint-env jest */
 
 import React from 'react'
-import Card from './Card'
+import Card from './'
+import renderer from 'react-test-renderer'
+import cases from 'jest-in-case'
 
-describe('Card', () => {
-  <Card />
-})
+cases(
+  'matches snapshots',
+  opts => {
+    expect(
+      renderer
+        .create(
+          <div style={{ width: '400px' }}>
+            <Card {...opts.props} />
+          </div>
+        )
+        .toJSON()
+    ).toMatchSnapshot()
+  },
+  [
+    { name: 'normal', props: {} },
+    { name: 'rounded', props: { rounded: true } },
+    { name: 'expand', props: { expand: true } }
+  ]
+)

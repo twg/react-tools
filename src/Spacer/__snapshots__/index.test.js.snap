@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshots large 1`] = `
+<div
+  className="spacer large"
+/>
+`;
+
+exports[`matches snapshots normal 1`] = `
+<div
+  className="spacer normal"
+/>
+`;
+
+exports[`matches snapshots small 1`] = `
+<div
+  className="spacer small"
+/>
+`;

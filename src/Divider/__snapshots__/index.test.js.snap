@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Divider matches snapshot 1`] = `
+<div>
+  <div />
+  <div
+    className="divider"
+  />
+  <div />
+</div>
+`;
+
+exports[`VerticalDivider matches snapshot 1`] = `
+<div>
+  <span />
+  <div
+    className="divider"
+  />
+  <span />
+</div>
+`;
