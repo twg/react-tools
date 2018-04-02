@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshots expand 1`] = `
+<div
+  style={
+    Object {
+      "width": "400px",
+    }
+  }
+>
+  <div
+    className="card expand"
+  />
+</div>
+`;
+
+exports[`matches snapshots normal 1`] = `
+<div
+  style={
+    Object {
+      "width": "400px",
+    }
+  }
+>
+  <div
+    className="card"
+  />
+</div>
+`;
+
+exports[`matches snapshots rounded 1`] = `
+<div
+  style={
+    Object {
+      "width": "400px",
+    }
+  }
+>
+  <div
+    className="card rounded"
+  />
+</div>
+`;
