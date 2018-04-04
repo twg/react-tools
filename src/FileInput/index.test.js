@@ -11,5 +11,5 @@ cases(
       renderer.create(<FileInput {...opts.props}>Label</FileInput>).toJSON()
     ).toMatchSnapshot()
   },
-  [{ name: 'primary', props: { label: <div>File input test:</div> } }]
+  [{ name: 'primary', props: { label: `File input test` } }]
 )

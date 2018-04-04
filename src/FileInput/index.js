@@ -1,48 +1,64 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-// import InputWrapper from '../input-wrapper'
 import css from './style.css'
 
-// In regards to styling, browsers don't make it easy to style a file input. The
-// typical workaround is to render an invisble <input type="file"> element and
-// hook it up to a label via the `for` attribute. The browser's behaviour is to
-// trigger a click on the associated input when the label is clicked, thus
-// causing the file selection dialog to open.
-
 export class FileInput extends React.Component {
-  constructor() {
-    super()
-    this.state = { files: [] }
-  }
+  blankState = { files: [], imagePreviewUrl: '' }
+  state = { ...this.blankState }
 
-  onChange = e => {
+  _onChange = e => {
+    let reader = new FileReader()
+    let file = e.target.files[0]
+
+    reader.onloadend = () => {
+      this.setState({
+        imagePreviewUrl: reader.result
+      })
+    }
+    reader.readAsDataURL(file)
+
     if (this.props.onChange) this.props.onChange(e)
     this.setState({ files: e.target.files })
   }
 
+  _onRemove = () => {
+    this.setState({ ...this.blankState })
+
+    if (this.props.onRemove) this.props.onRemove()
+  }
+
   render() {
-    const { label, showFilename, accept, multiple, disabled } = this.props
+    const { label, hideFileName, accept, multiple, disabled } = this.props
 
-    const { value, files } = this.state
+    const { value, files, imagePreviewUrl } = this.state
 
-    const { onChange } = this
+    const { _onChange, _onRemove } = this
 
     return (
       <div>
-        <label htmlFor={'id'}>{label}</label>
+        {files.length === 0 && (
+          <div>
+            <label className={css.label} htmlFor={'id'}>
+              {label}
+            </label>
+            <input
+              id={'id'}
+              type="file"
+              disabled={disabled}
+              style={{ display: 'none' }}
+              accept={accept}
+              multiple={multiple}
+              onChange={_onChange}
+            />
+          </div>
+        )}
 
-        <input
-          id={'id'}
-          type="file"
-          disabled={disabled}
-          style={{ display: 'none' }}
-          accept={accept}
-          multiple={multiple}
-          onChange={e => onChange(e)}
-        />
-
-        {showFilename && files && files.length > 0 ? (
-          <span>{files[0].name}</span>
+        {files && files.length > 0 ? (
+          <div className={css.imagepreviewwrapper}>
+            <img className={css.imagepreview} src={imagePreviewUrl} />
+            {!hideFileName && <span>{files[0].name}</span>}
+            <button onClick={_onRemove}>Remove</button>
+          </div>
         ) : null}
       </div>
     )
@@ -51,13 +67,13 @@ export class FileInput extends React.Component {
 
 FileInput.propTypes = {
   label: PropTypes.string.isRequired,
-  showFilename: PropTypes.bool,
+  hideFileName: PropTypes.bool,
   accept: PropTypes.string,
   multiple: PropTypes.bool
 }
 
 FileInput.defaultProps = {
-  showFilename: false,
+  hideFileName: false,
   multiple: false
 }
 

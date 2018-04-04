@@ -21,7 +21,7 @@ export default function() {
       `This is a basic button with various sizes.`,
       () => (
         <div>
-          <FileInput label={'Test Label - file Upload'} />
+          <FileInput label={'Click here to upload file'} />
         </div>
       ),
       { inline: true }
@@ -36,7 +36,7 @@ export default function() {
           <FileInput
             label={labelVal}
             disabled={boolean('disabled', true)}
-            showFilename={boolean('showFilename', true)}
+            hideFileName={boolean('hideFileName', true)}
           />
         )
       },

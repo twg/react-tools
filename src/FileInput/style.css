@@ -1,1 +1,26 @@
+.label{
+    box-sizing: border-box;
+    height: 220px;
+    width: 100%;
+    padding: 10px;
+    border: 2px dashed #B4C3C9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.label:hover{
+    cursor: pointer;
+    border-color: blue;
+}
+
+.imagepreviewwrapper{
+    display: flex;
+    align-items: center;
+}
+
+.imagepreview{
+    max-width: 150px;
+    max-height: 150px;
+}
 

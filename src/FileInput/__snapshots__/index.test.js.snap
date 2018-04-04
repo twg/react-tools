@@ -2,25 +2,26 @@
 
 exports[`matches snapshots primary 1`] = `
 <div>
-  <label
-    htmlFor="id"
-  >
-    <div>
-      File input test:
-    </div>
-  </label>
-  <input
-    accept={undefined}
-    disabled={undefined}
-    id="id"
-    multiple={false}
-    onChange={[Function]}
-    style={
-      Object {
-        "display": "none",
+  <div>
+    <label
+      className="label"
+      htmlFor="id"
+    >
+      File input test
+    </label>
+    <input
+      accept={undefined}
+      disabled={undefined}
+      id="id"
+      multiple={false}
+      onChange={[Function]}
+      style={
+        Object {
+          "display": "none",
+        }
       }
-    }
-    type="file"
-  />
+      type="file"
+    />
+  </div>
 </div>
 `;
