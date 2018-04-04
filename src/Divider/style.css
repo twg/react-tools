@@ -1,0 +1,15 @@
+.divider {
+  height: 1px;
+  width: 100%;
+  transform: scaleY(-1);
+  background-color: #e1e1e1;
+}
+
+.horizontal-divider{
+  height: 100%;
+  width: 2px;
+  transform: scaleY(-1);
+  background-color: #e8edef;
+  display: inline-block;
+  margin: 0 7px;
+}

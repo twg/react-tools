@@ -1,0 +1,14 @@
+@import "~styles/colors";
+
+.container {
+  width: 50%;
+  padding: 8px;
+  border: 1px solid darksalmon;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.twg {
+  padding: 0 5px;
+  color: $color-twg;
+}

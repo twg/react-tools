@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshots caution 1`] = `
+<div
+  style={
+    Object {
+      "width": "400px",
+    }
+  }
+>
+  <div
+    className="badge caution"
+  >
+    Wow!
+  </div>
+</div>
+`;
+
+exports[`matches snapshots error 1`] = `
+<div
+  style={
+    Object {
+      "width": "400px",
+    }
+  }
+>
+  <div
+    className="badge error"
+  >
+    Wow!
+  </div>
+</div>
+`;
+
+exports[`matches snapshots normal 1`] = `
+<div
+  style={
+    Object {
+      "width": "400px",
+    }
+  }
+>
+  <div
+    className="badge"
+  >
+    Wow!
+  </div>
+</div>
+`;
+
+exports[`matches snapshots rounded 1`] = `
+<div
+  style={
+    Object {
+      "width": "400px",
+    }
+  }
+>
+  <div
+    className="badge rounded"
+  >
+    Wow!
+  </div>
+</div>
+`;
+
+exports[`matches snapshots secondary 1`] = `
+<div
+  style={
+    Object {
+      "width": "400px",
+    }
+  }
+>
+  <div
+    className="badge secondary"
+  >
+    Wow!
+  </div>
+</div>
+`;
