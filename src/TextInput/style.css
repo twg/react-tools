@@ -1,0 +1,68 @@
+.textinput{
+    position: relative;
+    width: 300px;
+}
+
+.input {
+    width: 300px;
+    height: 45px;
+    border: solid 1px grey;
+    font-size: 14px;
+    box-sizing: border-box;
+    text-align: left;
+    padding: 10px;
+    color: #000;
+}
+
+.input::placeholder {
+    color: #9b9b9b;
+}
+
+.input:active {
+    border-color: green;
+    border-width: 2px;
+}
+
+.input:focus {
+    border-color: green;
+    border-width: 2px;
+    outline: none;
+}
+
+.input:disabled{
+    color: grey !important;
+}
+
+.input.error{
+    border-width: 2px;
+    border-color: red;
+}
+
+.inputlabel{
+    display: block;
+    padding-bottom: 7px;
+}
+
+.inputlabel h5{
+    margin-bottom: 0;
+}
+
+.exclamation{
+    width: 18px;
+    height: 18px;
+    background: red;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+}
+
+.error{
+    margin-top: 3px;
+}
+
+.error p{
+    color:red;
+}

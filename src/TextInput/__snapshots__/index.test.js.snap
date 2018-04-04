@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshots disabled 1`] = `
+<div
+  style={
+    Object {
+      "width": "400px",
+    }
+  }
+>
+  <div
+    className="textinput"
+  >
+    <label
+      className="inputlabel"
+      htmlFor={undefined}
+    >
+      <h5 />
+    </label>
+    <div
+      style={
+        Object {
+          "position": "relative",
+        }
+      }
+    >
+      <input
+        className="input"
+        disabled={true}
+        type="text"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`matches snapshots error 1`] = `
+<div
+  style={
+    Object {
+      "width": "400px",
+    }
+  }
+>
+  <div
+    className="textinput"
+  >
+    <label
+      className="inputlabel"
+      htmlFor={undefined}
+    >
+      <h5 />
+    </label>
+    <div
+      style={
+        Object {
+          "position": "relative",
+        }
+      }
+    >
+      <input
+        className="input error"
+        error="This is error"
+        type="text"
+      />
+      <div
+        className="exclamation"
+      >
+        !
+      </div>
+      <div
+        className="error"
+      >
+        <p>
+          This is error
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`matches snapshots normal 1`] = `
+<div
+  style={
+    Object {
+      "width": "400px",
+    }
+  }
+>
+  <div
+    className="textinput"
+  >
+    <label
+      className="inputlabel"
+      htmlFor={undefined}
+    >
+      <h5 />
+    </label>
+    <div
+      style={
+        Object {
+          "position": "relative",
+        }
+      }
+    >
+      <input
+        className="input"
+        type="text"
+      />
+    </div>
+  </div>
+</div>
+`;
