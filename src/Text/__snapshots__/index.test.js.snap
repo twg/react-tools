@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text Components matches H1 snapshot 1`] = `
+<div>
+  <h1
+    className="h1"
+  >
+    Testing value 
+     
+  </h1>
+</div>
+`;
+
+exports[`Text Components matches H2 snapshot 1`] = `
+<div>
+  <h2
+    className="h2"
+  >
+    Testing value 
+     
+  </h2>
+</div>
+`;
+
+exports[`Text Components matches H3 snapshot 1`] = `
+<div>
+  <h3
+    className="h3"
+  >
+    Testing value 
+     
+  </h3>
+</div>
+`;
+
+exports[`Text Components matches H4 snapshot 1`] = `
+<div>
+  <h4
+    className="h4"
+  >
+    Testing value 
+     
+  </h4>
+</div>
+`;
+
+exports[`Text Components matches H4 snapshot 2`] = `
+<div>
+  <h4
+    className="h4"
+  >
+    Testing value 
+     
+  </h4>
+</div>
+`;
+
+exports[`Text Components matches H5 snapshot 1`] = `
+<div>
+  <h5
+    className="h5"
+  >
+    Testing value 
+     
+  </h5>
+</div>
+`;
+
+exports[`Text Components matches H6 snapshot 1`] = `
+<div>
+  <h6
+    className="h6"
+  >
+    Testing value 
+     
+  </h6>
+</div>
+`;
+
+exports[`Text Components matches P snapshot 1`] = `
+<div>
+  <p
+    className="p"
+  >
+    Testing value 
+     
+  </p>
+</div>
+`;

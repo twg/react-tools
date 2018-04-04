@@ -1,0 +1,39 @@
+.h1{
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.h2{
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.45;
+}
+
+.h3{
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.44;
+}
+
+.h4{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.38;
+}
+
+.h5{
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.57;
+    letter-spacing: 0.9px;
+}
+
+.h6{
+    font-size: 14px;
+    line-height: 1.57;
+}
+
+.p{
+    font-size: 16px;
+    line-height: 1.5;
+}
