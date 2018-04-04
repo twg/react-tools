@@ -19,6 +19,24 @@ export const Radio = ({ id, onChange, name, checked, label }) => (
   </div>
 )
 
-Radio.propTypes = {}
+Radio.propTypes = {
+  /**
+   * This is the name of the radio, you need this for the label and input to be linked
+   */
+  id: PropTypes.string.isRequired,
+  /**
+   * This is the label of the button
+   */
+  label: PropTypes.string.isRequired,
+  /**
+   * Event to fire when radio changes, passes the checkbox value as
+   * an argument onChange={value => handleNewValue(value)}
+   */
+  onChange: PropTypes.func,
+  /**
+   * Whether the value is checked or not. Available values: true, false
+   */
+  checked: PropTypes.bool
+}
 
 export default Radio
