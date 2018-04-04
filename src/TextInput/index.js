@@ -3,17 +3,16 @@ import css from './style.css'
 import PropTypes from 'prop-types'
 
 export const TextInput = props => {
+  const inputClasses = [css.input]
+  if (props.error) inputClasses.push(css.error)
+
   return (
     <div className={css.textinput}>
       <label className={css.inputlabel} htmlFor={props.id}>
         <h5>{props.label}</h5>
       </label>
       <div style={{ ...props.style, position: 'relative' }}>
-        <input
-          className={props.error ? css.error : ''}
-          type="text"
-          {...props}
-        />
+        <input className={inputClasses.join(' ')} type="text" {...props} />
         {props.error && <div className={css.exclamation}>!</div>}
         {props.error && (
           <div className={css.error}>

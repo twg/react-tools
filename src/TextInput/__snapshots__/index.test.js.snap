@@ -25,7 +25,7 @@ exports[`matches snapshots disabled 1`] = `
       }
     >
       <input
-        className=""
+        className="input"
         disabled={true}
         type="text"
       />
@@ -59,7 +59,7 @@ exports[`matches snapshots error 1`] = `
       }
     >
       <input
-        className="error"
+        className="input error"
         error="This is error"
         type="text"
       />
@@ -105,7 +105,7 @@ exports[`matches snapshots normal 1`] = `
       }
     >
       <input
-        className=""
+        className="input"
         type="text"
       />
     </div>
