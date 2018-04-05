@@ -1,0 +1,15 @@
+.sidebar {
+    height: 100%;
+    width: 10%;
+    box-shadow: 0 0 3px 0 rgba(51, 62, 71, 0.26);
+    box-sizing: border-box;
+    padding: 9px 16px;
+    top: 0;
+    background: blue;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    overflow-y: scroll;
+}
