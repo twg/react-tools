@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Radio renders an checked radio button 1`] = `
+<div
+  className="wrapper"
+>
+  <label
+    className="label"
+    htmlFor="checked"
+  >
+    <input
+      checked={true}
+      className="radio"
+      name={undefined}
+      onChange={undefined}
+      type="radio"
+    />
+    <span
+      className="span"
+    />
+  </label>
+  <p
+    style={
+      Object {
+        "marginTop": "4px",
+      }
+    }
+  >
+    Checked Example
+  </p>
+</div>
+`;
+
+exports[`Radio renders an unchecked radio button 1`] = `
+<div
+  className="wrapper"
+>
+  <label
+    className="label"
+    htmlFor="unchecked"
+  >
+    <input
+      checked={false}
+      className="radio"
+      name={undefined}
+      onChange={undefined}
+      type="radio"
+    />
+    <span
+      className="span"
+    />
+  </label>
+  <p
+    style={
+      Object {
+        "marginTop": "4px",
+      }
+    }
+  >
+    Unchecked Example
+  </p>
+</div>
+`;

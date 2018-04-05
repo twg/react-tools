@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sidebar matches snapshot 1`] = `
+<div
+  style={
+    Object {
+      "border": "1px solid grey",
+      "height": "300px",
+      "width": "600px",
+    }
+  }
+>
+  <div
+    className="sidebar"
+  >
+    <div>
+      1
+    </div>
+    <div>
+      2
+    </div>
+    <div>
+      3
+    </div>
+    <div>
+      4
+    </div>
+    <div>
+      5
+    </div>
+    <div>
+      1
+    </div>
+    <div>
+      2
+    </div>
+    <div>
+      3
+    </div>
+    <div>
+      4
+    </div>
+    <div>
+      5
+    </div>
+    <div>
+      1
+    </div>
+    <div>
+      2
+    </div>
+    <div>
+      3
+    </div>
+    <div>
+      3
+    </div>
+    <div>
+      3
+    </div>
+    <div>
+      3
+    </div>
+    <div>
+      3
+    </div>
+    <div>
+      3
+    </div>
+    <div>
+      3
+    </div>
+    <div>
+      3
+    </div>
+    <div>
+      3
+    </div>
+    <div>
+      3
+    </div>
+    <div>
+      3
+    </div>
+    <div>
+      3
+    </div>
+  </div>
+</div>
+`;
