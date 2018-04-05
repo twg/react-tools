@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshots primary 1`] = `
+<div>
+  <div>
+    <label
+      className="label"
+      htmlFor="id"
+    >
+      File input test
+    </label>
+    <input
+      accept={undefined}
+      disabled={undefined}
+      id="id"
+      multiple={false}
+      onChange={[Function]}
+      style={
+        Object {
+          "display": "none",
+        }
+      }
+      type="file"
+    />
+  </div>
+</div>
+`;
