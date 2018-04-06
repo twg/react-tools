@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toggle renders a toggled toggle 1`] = `
+<div
+  className="toggleSwitchWrapper"
+>
+  <label
+    className="beforeLabel"
+  >
+    Unchecked Example
+  </label>
+  <div
+    className="toggle"
+    onClick={[Function]}
+  >
+    <div
+      className="toggleBall"
+    />
+  </div>
+  <label
+    className="afterLabel"
+  >
+    Unchecked Example
+  </label>
+</div>
+`;
+
+exports[`Toggle renders an untoggled toggle 1`] = `
+<div
+  className="toggleSwitchWrapper"
+>
+  <label
+    className="beforeLabel"
+  >
+    Unchecked Example
+  </label>
+  <div
+    className="toggle"
+    onClick={[Function]}
+  >
+    <div
+      className="toggleBall"
+    />
+  </div>
+  <label
+    className="afterLabel"
+  >
+    Unchecked Example
+  </label>
+</div>
+`;

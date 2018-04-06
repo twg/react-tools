@@ -1,0 +1,57 @@
+.toggleSwitchWrapper{
+    display: flex;
+    position: relative;
+}
+
+.toggle{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    transform: translate3d(0, 0, 0);
+    background-color: lightgray;
+    height: 24px;
+    min-width: 47px;
+    border-radius: 8px;
+    transition: background-color 500ms linear;
+}
+
+.toggle.toggled {
+    background-color: green;
+}
+
+.toggle:hover {
+    cursor: pointer;
+}
+
+.toggleBall{
+  z-index: 2;
+  border-radius: 7px;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s cubic-bezier(1, 0.19, 0.15, 0.7);
+  transition-delay: 0.1s;
+  will-change: transform;
+  background-color: white;
+  border: 1px solid grey;
+  height: 20px;
+  width: 20px;
+  transform: translateX(2px);
+}
+
+.toggleBall.toggled{
+    transform: translateX(23.5px);
+}
+
+.toggleBall:active{
+    background-color: grey;
+}
+
+.beforeLabel{
+  padding-right: 9px;
+  padding-top: 3px;
+}
+
+.afterLabel {
+  padding-left: 9px;
+  padding-top: 3px;
+}
