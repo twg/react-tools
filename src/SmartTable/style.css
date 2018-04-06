@@ -1,0 +1,50 @@
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout:fixed;
+  }
+  
+  .tableHead {
+    color: #333333;
+    background-color: #f2f2f2;
+    height: 16px;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    border: solid 1px #acacac;
+    border-left: none;
+    border-right: none;
+  }
+  
+  .tableRow {
+    border-bottom: solid 0.3px #acacac;
+  }
+  
+  .tableRow.checked {
+    background: #f9f1f1;
+  }
+  
+  .tableData {
+    padding: 14px;
+    font-size: 11px;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 0.8px;
+    color: #333333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 140px;
+  }
+  
+  .tableHead .tableData {
+    font-family: 'PlayfairDisplay-Bold';
+    border: none;
+    font-size: 13px;
+  }
+  
+  .sortableHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333333;
+  }
