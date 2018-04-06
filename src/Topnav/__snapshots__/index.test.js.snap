@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TopNav matches snapshot 1`] = `
+<div
+  style={
+    Object {
+      "border": "1px solid grey",
+      "height": "300px",
+      "maxWidth": "740px",
+      "width": "100%",
+    }
+  }
+>
+  <div
+    className="topnav"
+    style={Object {}}
+  >
+    <div
+      className="left"
+    >
+      <button
+        className="mobileButton"
+        onClick={[Function]}
+      >
+        ☰
+      </button>
+      <img
+        src="https://twg.io/954c24bb4bbfe909730f85f6c55c8e9e.svg"
+        width="175px"
+      />
+    </div>
+    <div
+      className="center"
+    >
+      <h4>
+        Page Title
+      </h4>
+    </div>
+    <div
+      className="right"
+    >
+      <ul
+        style={Object {}}
+      >
+        <li>
+          item
+        </li>
+        <li>
+          item2
+        </li>
+        <li>
+          item2
+        </li>
+        <li>
+          item2
+        </li>
+        <li>
+          item2
+        </li>
+      </ul>
+      <div
+        style={
+          Object {
+            "display": "inherit",
+          }
+        }
+      >
+        <img
+          alt=""
+          class="avatar js-action-profile-avatar"
+          src="https://pbs.twimg.com/profile_images/608742547272290304/vl4pXqqG_bigger.png"
+          style={
+            Object {
+              "borderRadius": "50%",
+              "height": "58px",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
