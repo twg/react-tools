@@ -1,0 +1,423 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SmartTable matches snapshot 1`] = `
+<table
+  className="table"
+>
+  <thead
+    className="tableHead"
+  >
+    <tr
+      className="tableRow  "
+    >
+      <th
+        className="tableHead"
+        onClick={[Function]}
+      >
+        name
+      </th>
+      <th
+        className="tableHead"
+        onClick={[Function]}
+      >
+        power
+      </th>
+      <th
+        className="tableHead"
+        onClick={[Function]}
+      >
+        cool
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      className="tableRow  "
+    >
+      <td
+        className="tableData"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        Scott
+      </td>
+      <td
+        className="tableData"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        lazers (pew pew)
+      </td>
+      <td
+        className="tableData"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        no
+      </td>
+    </tr>
+    <tr
+      className="tableRow  "
+    >
+      <td
+        className="tableData"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        James
+      </td>
+      <td
+        className="tableData"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        healing
+      </td>
+      <td
+        className="tableData"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        yes
+      </td>
+    </tr>
+    <tr
+      className="tableRow  "
+    >
+      <td
+        className="tableData"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        Jean
+      </td>
+      <td
+        className="tableData"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        firebirds
+      </td>
+      <td
+        className="tableData"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        yes
+      </td>
+    </tr>
+    <tr
+      className="tableRow  "
+    >
+      <td
+        className="tableData"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        Hank
+      </td>
+      <td
+        className="tableData"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        being blue
+      </td>
+      <td
+        className="tableData"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        no
+      </td>
+    </tr>
+    <tr
+      className="tableRow  "
+    >
+      <td
+        className="tableData"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        Xavier
+      </td>
+      <td
+        className="tableData"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        brains
+      </td>
+      <td
+        className="tableData"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        yes
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`Table matches snapshot 1`] = `
+<table
+  className="table"
+>
+  <thead
+    className="tableHead"
+  >
+    <tr
+      className="tableRow  "
+    >
+      <td
+        className="tableData"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        name
+      </td>
+      <td
+        className="tableData"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        power
+      </td>
+      <td
+        className="tableData"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        cool
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      className="tableRow  "
+    >
+      <td
+        className="tableData"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        Scott
+      </td>
+      <td
+        className="tableData"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        lazers (pew pew)
+      </td>
+      <td
+        className="tableData"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        no
+      </td>
+    </tr>
+    <tr
+      className="tableRow  "
+    >
+      <td
+        className="tableData"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        James
+      </td>
+      <td
+        className="tableData"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        healing
+      </td>
+      <td
+        className="tableData"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        yes
+      </td>
+    </tr>
+    <tr
+      className="tableRow  "
+    >
+      <td
+        className="tableData"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        Jean
+      </td>
+      <td
+        className="tableData"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        firebirds
+      </td>
+      <td
+        className="tableData"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        yes
+      </td>
+    </tr>
+    <tr
+      className="tableRow  "
+    >
+      <td
+        className="tableData"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        Hank
+      </td>
+      <td
+        className="tableData"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        being blue
+      </td>
+      <td
+        className="tableData"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        no
+      </td>
+    </tr>
+    <tr
+      className="tableRow  "
+    >
+      <td
+        className="tableData"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        Xavier
+      </td>
+      <td
+        className="tableData"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        brains
+      </td>
+      <td
+        className="tableData"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        yes
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
