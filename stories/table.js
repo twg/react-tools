@@ -12,7 +12,7 @@ import {
 } from '@storybook/addon-knobs'
 import { checkA11y } from '@storybook/addon-a11y'
 
-import { SmartTable } from '../src'
+import { Table } from '../src'
 
 const data = [
   { name: 'Scott', power: 'lazers (pew pew)', cool: 'no' },
@@ -23,7 +23,7 @@ const data = [
 ]
 
 export default function() {
-  const stories = storiesOf('Tables/Smart Table', module)
+  const stories = storiesOf('Tables/Normal Table', module)
     .addDecorator(withKnobs)
     .addDecorator(checkA11y)
 
@@ -33,7 +33,7 @@ export default function() {
       text: 'A series table components ',
       inline: true
     })(() => {
-      return <SmartTable data={data} />
+      return <Table data={data} />
     })
   )
 }
