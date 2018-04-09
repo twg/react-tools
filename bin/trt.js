@@ -27,7 +27,18 @@ prog
 prog
   .command('include', 'Include a component from the library')
   .alias('i')
-  .argument('<name>', 'Name of existing component', ['Button', 'Card'])
+  .argument('<name>', 'Name of existing component')
+  .complete(function() {
+    return [
+      'Badge',
+      'Button',
+      'Card',
+      'Checkbox',
+      'Combo',
+      'Divider',
+      'ErrorBoundary'
+    ]
+  })
   .argument('[target]', 'Target location to place component')
   .action(async function(args, options, logger) {
     let { target, name } = args
