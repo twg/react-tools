@@ -86,7 +86,7 @@ All these instructions assume you're on a Mac:
 * Install bash completion with brew
 * * brew install bash-completion
 * Run the following command in your terminal
-* * `trt completion bash > $(brew --prefix)/etc/bash_completion.d/trt`
+* * `trt completion `echo $SHELL | xargs basename` > $(brew --prefix)/etc/bash_completion.d/trt`
 * Add the following to your .bashrc file
 ```
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
