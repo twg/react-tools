@@ -76,6 +76,24 @@ There are 2 arguments for this command:
 
 `trt include Tooltip` or `trt include Tooltip ./components`
 
+### Autocomplete
+Oh. So you like autocompletion? You don't want to have to memorize the millions of different components that the library has to offer? We've got you covered! Autocomplete is now part of the CLI (though, it's going to take a little work on your part, if you're willing. It'll make your life nice, I promise.)
+
+Is it a little buggy? Yeah. I ain't know why, I'm sorry.
+
+All these instructions assume you're on a Mac:
+
+* Install bash completion with brew
+* * brew install bash-completion
+* Run the following command in your terminal
+* * `trt completion `echo $SHELL | xargs basename` > $(brew --prefix)/etc/bash_completion.d/trt`
+* Add the following to your .bashrc file
+```
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+. $(brew --prefix)/etc/bash_completion
+fi
+```
+
 ## Generate
 
 This command will create a new react app using TWG's style guide. This is an app that's been initialized with create react app (so you still get to use all those great utility scripts and configs), and has been updated to include a better folder structure for building apps on top of.
