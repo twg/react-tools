@@ -48,7 +48,6 @@ prog
     appWizard.start()
   })
 
-// TODO -- get this list
 prog
   .command('include', 'Include a component from the library')
   .alias('i')
