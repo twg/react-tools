@@ -7,6 +7,31 @@ const componentWizard = require('./scripts/componentCreationWizard')
 const appWizard = require('./scripts/appCreationWizard')
 const include = require('./scripts/include')
 
+// TODO -- Figure out how best to get this dynamically
+const COMPONENTS = [
+  'Badge',
+  'Button',
+  'Card',
+  'Checkbox',
+  'Combo',
+  'Divider',
+  'ErrorBoundary',
+  'FileInput',
+  'Grid',
+  'GridItem',
+  'InlineEdit',
+  'Radio',
+  'Sidebar',
+  'SmartTable',
+  'Table',
+  'Spacer',
+  'Text',
+  'TextInput',
+  'Toggle',
+  'Tooltip',
+  'Topnav'
+]
+
 prog.version('1.0.0')
 
 prog
@@ -23,21 +48,12 @@ prog
     appWizard.start()
   })
 
-// TODO -- get list of all folders in src and place them as args
 prog
   .command('include', 'Include a component from the library')
   .alias('i')
   .argument('<name>', 'Name of existing component')
   .complete(function() {
-    return [
-      'Badge',
-      'Button',
-      'Card',
-      'Checkbox',
-      'Combo',
-      'Divider',
-      'ErrorBoundary'
-    ]
+    return COMPONENTS
   })
   .argument('[target]', 'Target location to place component')
   .action(async function(args, options, logger) {
