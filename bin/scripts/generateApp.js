@@ -61,7 +61,7 @@ const generateComponent = async ({
   // Add prettier if needed
   if (prettier) {
     console.log(`Adding Prettier`)
-    await copy(`${basePath}/prettier`, './')
+    await copy(`${basePath}/prettier/.prettierrc`, './.prettierrc')
     const prettier = JSON.parse(
       fs.readFileSync(`${basePath}/prettier/dependencies.json`)
     )
@@ -76,7 +76,7 @@ const generateComponent = async ({
 
   // clean up adjusted package.json
   const sorted = packageSort(jsonData)
-  fs.writeFileSync('package.json', JSON.stringify(sorted))
+  fs.writeFileSync('package.json', JSON.stringify(sorted, null, 2))
 
   console.log(`Updating webpack config files`)
   updateWebpackConfigs()
