@@ -16,7 +16,7 @@ _*NEW!*_
 * Generate a react app with the structure that TWG prefers!
 
 # Installing && Updating
-You can easily add TRT to your globals by adding 
+You can easily add TRT to your globals by adding
 
 `yarn global add twg-react-tools`
 
@@ -94,7 +94,7 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 ```
 
-## Generate
+## Create
 
 This command will create a new react app using TWG's style guide. This is an app that's been initialized with create react app (so you still get to use all those great utility scripts and configs), and has been updated to include a better folder structure for building apps on top of.
 
