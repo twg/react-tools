@@ -37,7 +37,6 @@
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react-guidelines": "twg/react-guidelines",
     "react-test-renderer": "^16.0.0",
     "replace-in-file": "^3.4.0",
     "shelljs": "^0.8.1",
