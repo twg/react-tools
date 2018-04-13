@@ -78,7 +78,18 @@ const generateComponent = async ({
   const sorted = packageSort(jsonData)
   fs.writeFileSync('package.json', JSON.stringify(sorted))
 
+  console.log(`Updating webpack config files`)
+  updateWebpackConfigs()
+
+  /* Replace template string variables in newly created folder */
+  replace.sync(options)
+  console.log(`${names.__UPPER_CAMEL_NAME__} created ✨`)
+}
+
+const updateWebpackConfigs = () => {
   // Update webpack config file for sass ++ aliases
+  // This is all pretty brittle, since we're just literall just updating js files
+  // but it works!
   let webpackDev = fs.readFileSync('config/webpack.config.dev.js', 'utf8')
   const aliasMarker = 'alias: {'
   const index = webpackDev.indexOf(aliasMarker) + aliasMarker.length
@@ -105,10 +116,27 @@ const generateComponent = async ({
 
   fs.writeFileSync('config/webpack.config.dev.js', webpackDev)
 
-  /* Replace template string variables in newly created folder */
-  replace.sync(options)
-  console.log(`${names.__UPPER_CAMEL_NAME__} created ✨`)
-  console.log(`Be sure to update your package.json description!`)
+  // PROD WEBPACK
+  let webpackProd = fs.readFileSync('config/webpack.config.prod.js', 'utf8')
+  const prodIndex = webpackProd.indexOf(aliasMarker) + aliasMarker.length
+  webpackProd =
+    webpackProd.substr(0, prodIndex) + aliases + webpackProd.substr(prodIndex)
+
+  const prodCssMarker = '.css$'
+  const prodCssIndex = webpackProd.indexOf(prodCssMarker) + 1
+  webpackProd =
+    webpackProd.substr(0, prodCssIndex) +
+    sassVal +
+    webpackProd.substr(prodCssIndex)
+
+  let prodFileIndex = webpackProd.indexOf(fileMarker) - 46
+
+  webpackProd =
+    webpackProd.substr(0, prodFileIndex) +
+    loaderVal +
+    webpackProd.substr(prodFileIndex)
+
+  fs.writeFileSync('config/webpack.config.prod.js', webpackProd)
 }
 
 module.exports = generateComponent
