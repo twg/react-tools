@@ -1,6 +1,8 @@
 const _ = require('lodash')
 const replace = require('replace-in-file')
 const execSync = require('child_process').execSync
+const fs = require('fs')
+const packageSort = require('sort-package-json')
 
 const copy = require('./copy')
 
@@ -20,6 +22,10 @@ const generateComponent = async ({
   }
   const basePath = `${__dirname}/../templates/app`
   const targetPath = `${__dirname}/${target}/${names.__KEBAB_NAME__}`
+
+  const deps = JSON.parse(
+    fs.readFileSync(`${basePath}/base/snippets/dependencies.json`)
+  )
 
   const options = {
     files: [`./*.*`],
@@ -48,21 +54,29 @@ const generateComponent = async ({
   console.log(`Setting up ${targetPath}/src . . .`)
   execSync(`rm -rf ./src`)
   await copy(`${basePath}/base/src`, `./src`)
+  let jsonData = JSON.parse(fs.readFileSync('package.json'))
+
+  jsonData = _.merge(jsonData, deps)
 
   // Add prettier if needed
   if (prettier) {
+    console.log(`Adding Prettier`)
     await copy(`${basePath}/prettier`, './')
-    // execSync(`npx npm-add prettier husky lint-staged`)
-    // Add lint-staged to file
+    const prettier = JSON.parse(
+      fs.readFileSync(`${basePath}/prettier/dependencies.json`)
+    )
+    jsonData = _.merge(jsonData, prettier)
   }
 
   // Add travis if needed
   if (travis) {
+    console.log(`Adding Travis`)
     await copy(`${basePath}/travis`, './')
   }
 
-  // Add other npm modules that are needed
-
+  // clean up adjusted package.json
+  const sorted = packageSort(jsonData)
+  fs.writeFileSync('package.json', JSON.stringify(sorted))
   /* Replace template string variables in newly created folder */
   replace.sync(options)
   console.log(`${names.__UPPER_CAMEL_NAME__} created ✨`)
