@@ -1,0 +1,3 @@
+{
+  "loader": { "loader": require.resolve("sass-loader") }
+}
