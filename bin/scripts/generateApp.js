@@ -77,6 +77,34 @@ const generateComponent = async ({
   // clean up adjusted package.json
   const sorted = packageSort(jsonData)
   fs.writeFileSync('package.json', JSON.stringify(sorted))
+
+  // Update webpack config file for sass ++ aliases
+  let webpackDev = fs.readFileSync('config/webpack.config.dev.js', 'utf8')
+  const aliasMarker = 'alias: {'
+  const index = webpackDev.indexOf(aliasMarker) + aliasMarker.length
+  const aliases = `      core: path.resolve(__dirname, '../src/core'),
+  common: path.resolve(__dirname, '../src/common'),
+  styles: path.resolve(__dirname, '../src/common/styles'),`
+  webpackDev = webpackDev.substr(0, index) + aliases + webpackDev.substr(index)
+
+  const cssMarker = '.css'
+  const cssIndex = webpackDev.indexOf(cssMarker) + 1
+  const sassVal = `s?`
+  webpackDev =
+    webpackDev.substr(0, cssIndex) + sassVal + webpackDev.substr(cssIndex)
+
+  const fileMarker = `loader: require.resolve('postcss-loader'),`
+  let fileIndex = webpackDev.indexOf(fileMarker) - 34
+  const loaderVal = `,
+    {
+      loader: require.resolve('sass-loader')
+    }`
+
+  webpackDev =
+    webpackDev.substr(0, fileIndex) + loaderVal + webpackDev.substr(fileIndex)
+
+  fs.writeFileSync('config/webpack.config.dev.js', webpackDev)
+
   /* Replace template string variables in newly created folder */
   replace.sync(options)
   console.log(`${names.__UPPER_CAMEL_NAME__} created ✨`)
