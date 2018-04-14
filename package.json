@@ -1,7 +1,7 @@
 {
   "name": "twg-react-tools",
   "description": "Take a component, leave a component",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "author": "twg",
   "license": "MIT",
   "private": false,
