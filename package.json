@@ -42,16 +42,16 @@
     "shelljs": "^0.8.1",
     "sort-package-json": "^1.12.0",
     "style-loader": "^0.20.3",
-    "webpack-combine-loaders": "^2.0.3"
-  },
-  "devDependencies": {
+    "webpack-combine-loaders": "^2.0.3",
     "@storybook/addon-a11y": "^3.3.15",
     "@storybook/addon-actions": "^3.3.15",
     "@storybook/addon-info": "^3.3.15",
     "@storybook/addon-knobs": "^3.3.15",
     "@storybook/addon-links": "^3.3.15",
     "@storybook/addons": "^3.3.15",
-    "@storybook/react": "^3.3.15",
+    "@storybook/react": "^3.3.15"
+  },
+  "devDependencies": {
     "husky": "^0.14.3",
     "lint-staged": "^7.0.0",
     "prettier": "^1.7.0"
