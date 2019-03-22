@@ -1,7 +1,7 @@
 /* eslint-env jest */
 
 import { fetchUsers } from './actions'
-import mockResponse from 'test/mockResponse'
+import mockResponse from '../../../test/mockResponse'
 
 describe('user actions', () => {
   describe('fetchUsers', () => {

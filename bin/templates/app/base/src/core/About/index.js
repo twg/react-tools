@@ -1,7 +1,7 @@
 import React from 'react'
 import css from './style.scss'
 import spinr from './spinr.png'
-import { Toggler } from 'common/components'
+import { Toggler } from '../../common/components'
 
 const About = () => (
   <div>

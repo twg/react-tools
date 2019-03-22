@@ -1,4 +1,4 @@
-import { createReducer } from 'common/utils'
+import { createReducer } from '../../common/utils'
 
 export const INITIAL_STATE = {
   users: []
