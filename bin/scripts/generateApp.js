@@ -12,7 +12,8 @@ const generateComponent = async ({
   prettier,
   travis,
   name,
-  target
+  target,
+  ts
 }) => {
   const names = {
     __UPPER_CAMEL_NAME__: _.upperFirst(_.camelCase(name)),
@@ -38,12 +39,17 @@ const generateComponent = async ({
     to: Object.values(names)
   }
 
+  const createReactOptions = [];
+  if(ts) {
+    createReactOptions.push('--typescript');
+  }
+
   // Start with running cra
   console.log(
     `Generating ${names.__KEBAB_NAME__} . . . This will take a moment`
   )
   process.chdir(target)
-  execSync(`npx create-react-app ${names.__KEBAB_NAME__}`)
+  execSync(`npx create-react-app ${names.__KEBAB_NAME__} ${createReactOptions.join(' ')}`)
 
   // Ejecting the app
   console.log(`Preparing for updating ${names.__KEBAB_NAME__} . . .`)
