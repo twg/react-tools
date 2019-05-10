@@ -53,7 +53,16 @@ const QUESTIONS = [
     filter: function(val) {
       return val.toLowerCase() === 'yes'
     }
-  }
+  },
+  {
+    type: 'list',
+    name: 'ts',
+    message: 'Do you want typescript set up?',
+    choices: ['Yes', 'No'],
+    filter: function(val) {
+      return val.toLowerCase() === 'yes'
+    }
+  },
 ]
 
 const start = () => {

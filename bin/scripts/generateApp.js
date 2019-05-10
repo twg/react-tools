@@ -12,7 +12,8 @@ const generateComponent = async ({
   prettier,
   travis,
   name,
-  target
+  target,
+  ts
 }) => {
   const names = {
     __UPPER_CAMEL_NAME__: _.upperFirst(_.camelCase(name)),
@@ -38,17 +39,24 @@ const generateComponent = async ({
     to: Object.values(names)
   }
 
+  const createReactOptions = []
+  if (ts) {
+    createReactOptions.push('--scripts-version=react-scripts-ts@4.0.8')
+  }
+
   // Start with running cra
   console.log(
     `Generating ${names.__KEBAB_NAME__} . . . This will take a moment`
   )
   process.chdir(target)
-  execSync(`npx create-react-app ${names.__KEBAB_NAME__}`)
+  execSync(
+    `npx create-react-app ${names.__KEBAB_NAME__} ${createReactOptions.join(
+      ' '
+    )}`
+  )
 
-  // Ejecting the app
   console.log(`Preparing for updating ${names.__KEBAB_NAME__} . . .`)
   process.chdir(names.__KEBAB_NAME__)
-  execSync(`echo y | npm run eject`)
 
   // Copy src folder from sample app
   console.log(`Setting up ${targetPath}/src . . .`)
@@ -74,6 +82,17 @@ const generateComponent = async ({
     await copy(`${basePath}/travis`, './')
   }
 
+  // Update tslint config if tslint is enabled
+  if (ts) {
+    console.log(`Adding TypeScript`)
+    const tslintConfig = fs.readFileSync(
+      `${basePath}/base/config/tslint.json`,
+      'utf8'
+    )
+    const currentTsLintConfig = fs.readFileSync('tslint.json')
+    fs.writeFileSync('tslint.json', _.merge(tslintConfig, currentTsLintConfig))
+  }
+
   // clean up adjusted package.json
   const sorted = packageSort(jsonData)
   fs.writeFileSync('package.json', JSON.stringify(sorted, null, 2))
@@ -87,10 +106,14 @@ const generateComponent = async ({
 }
 
 const updateWebpackConfigs = () => {
+  const basePath = `../templates/app/base`
   // Update webpack config file for sass ++ aliases
   // This is all pretty brittle, since we're just literall just updating js files
   // but it works!
-  let webpackDev = fs.readFileSync('config/webpack.config.dev.js', 'utf8')
+  let webpackDev = fs.readFileSync(
+    `${basePath}/config/webpack.config.dev.js`,
+    'utf8'
+  )
   const aliasMarker = 'alias: {'
   const index = webpackDev.indexOf(aliasMarker) + aliasMarker.length
   const aliases = `      core: path.resolve(__dirname, '../src/core'),
@@ -114,10 +137,13 @@ const updateWebpackConfigs = () => {
   webpackDev =
     webpackDev.substr(0, fileIndex) + loaderVal + webpackDev.substr(fileIndex)
 
-  fs.writeFileSync('config/webpack.config.dev.js', webpackDev)
+  fs.writeFileSync(`${basePath}/config/webpack.config.dev.js`, webpackDev)
 
   // PROD WEBPACK
-  let webpackProd = fs.readFileSync('config/webpack.config.prod.js', 'utf8')
+  let webpackProd = fs.readFileSync(
+    `${basePath}/config/webpack.config.prod.js`,
+    'utf8'
+  )
   const prodIndex = webpackProd.indexOf(aliasMarker) + aliasMarker.length
   webpackProd =
     webpackProd.substr(0, prodIndex) + aliases + webpackProd.substr(prodIndex)
@@ -136,7 +162,7 @@ const updateWebpackConfigs = () => {
     loaderVal +
     webpackProd.substr(prodFileIndex)
 
-  fs.writeFileSync('config/webpack.config.prod.js', webpackProd)
+  fs.writeFileSync(`${basePath}/config/webpack.config.prod.js`, webpackProd)
 }
 
 module.exports = generateComponent

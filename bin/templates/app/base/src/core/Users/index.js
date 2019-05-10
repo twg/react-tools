@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { fetchUsers } from './actions'
 import User from './components/User'
 
-import { Button } from 'common/components'
+import { Button } from '../../common/components'
 import { getETailers } from './selectors'
 
 export class Users extends React.Component {
